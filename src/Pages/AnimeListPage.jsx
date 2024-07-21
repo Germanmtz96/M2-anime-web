@@ -19,8 +19,11 @@ function AnimeListPage() {
   return (
     <div id="anime-list">
       <button onClick={handleFilterButton}>Filter</button>
-      {searchIsVisible && <Formulario />}
+
+      {filterIsVisible && <Formulario />}
+
       <button onClick={handleSearchButton}>Search</button>
+
       {searchIsVisible && <Buscador />}
 
       {/*Array.map(e=>{
