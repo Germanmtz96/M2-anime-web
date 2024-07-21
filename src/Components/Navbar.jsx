@@ -1,13 +1,13 @@
 import React from 'react'
 import logo from "../assets/logo-1.png"
-import listIcon from "react-icons/"
-
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <div>
-        <img src={logo} alt="" />
-        <img src="" alt="" />
+    <div className='navbar'>
+      <Link to="/">
+        <img src={logo} alt="" id='nav-logo' />
+      </Link>
     </div>
   )
 }

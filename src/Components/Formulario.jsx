@@ -2,7 +2,7 @@ import React from 'react'
 
 function Formulario() {
   return (
-    <div>Formulario</div>
+    <div className='formulario'>Formulario</div>
   )
 }
 

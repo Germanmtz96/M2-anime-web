@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage";
 import AnimeDetailsPage from "./Pages/AnimeDetailsPage";
 import ErrorPage from "./Pages/ErrorPage";
+import Error2Page from "./Pages/Error2Page"
 import HomePage from "./Pages/HomePage";
 import AnimeListPage from "./Pages/AnimeListPage";
 import Navbar from "./Components/Navbar";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/*" element={<ErrorPage />} />
+        <Route path="/undefined" element={<Error2Page />} />
         <Route path="/anime-list/:id" element={<AnimeDetailsPage />} />
         <Route path="/anime-list" element={<AnimeListPage />} />
       </Routes>

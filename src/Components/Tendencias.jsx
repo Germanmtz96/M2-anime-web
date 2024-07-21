@@ -2,7 +2,9 @@ import React from 'react'
 
 function Tendencias() {
   return (
-    <div>Tendencias</div>
+    <div id='tendencias'>Tendencias
+
+    </div>
   )
 }
 

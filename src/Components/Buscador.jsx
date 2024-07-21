@@ -2,7 +2,7 @@ import React from 'react'
 
 function Buscador() {
   return (
-    <div>Buscador</div>
+    <div className='buscador'>Buscador</div>
   )
 }
 

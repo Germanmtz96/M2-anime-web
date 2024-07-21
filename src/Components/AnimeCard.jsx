@@ -2,7 +2,7 @@ import React from 'react'
 
 function AnimeCard() {
   return (
-    <div>AnimeCard</div>
+    <div className='anime-card'>AnimeCard</div>
   )
 }
 
