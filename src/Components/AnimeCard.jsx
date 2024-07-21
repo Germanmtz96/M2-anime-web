@@ -1,8 +1,12 @@
 import React from 'react'
 
-function AnimeCard() {
+function AnimeCard(props) {
   return (
-    <div className='anime-card'>AnimeCard</div>
+    <div className='anime-card'>
+      
+    <img src={props.eachAnime.images.jpg.image_url}/>
+    <h2>{props.eachAnime.title}</h2>
+    </div>
   )
 }
 

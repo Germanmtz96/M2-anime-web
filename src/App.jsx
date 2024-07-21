@@ -18,7 +18,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/*" element={<ErrorPage />} />
         <Route path="/undefined" element={<Error2Page />} />
-        <Route path="/anime-list/:id" element={<AnimeDetailsPage />} />
+        <Route path="/anime-list/:title" element={<AnimeDetailsPage />} />
         <Route path="/anime-list" element={<AnimeListPage />} />
       </Routes>
       <Footer />

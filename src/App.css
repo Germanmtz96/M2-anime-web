@@ -8,9 +8,11 @@ html *{
 
 #nav-logo{
   width: 100%;
+  background-color: #6b20ee;
 }
 .footer{
-  position: absolute;
+  background-color: #6b20ee;
+  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: center;
