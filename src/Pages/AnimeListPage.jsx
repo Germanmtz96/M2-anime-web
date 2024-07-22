@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+import Button from 'react-bootstrap/Button';
+
 function AnimeListPage() {
   const [filterIsVisible, setFilterIsVisible] = useState(false);
   const [searchIsVisible, setSearchIsVisible] = useState(false);
@@ -37,14 +39,11 @@ function AnimeListPage() {
 console.log(animeList)
   return (
     <div id="anime-list">
-      <button onClick={handleFilterButton}>Filter</button>
+      <Button id="search-btn" variant="outline-info" onClick={handleFilterButton}>Busqueda avanzada</Button>
 
       {filterIsVisible && <Formulario />}
 
-      <button onClick={handleSearchButton}>Search</button>
-
-      {searchIsVisible && <Buscador />}
-
+    <section id="lista-animes">
       {animeList.data.map((eachAnime)=>{
         return(
       <Link   to={`/anime-list/${eachAnime.mal_id}`}>
@@ -52,6 +51,7 @@ console.log(animeList)
       </Link>)
       })
       }
+      </section>
     </div>
   );
 }

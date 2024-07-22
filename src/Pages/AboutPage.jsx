@@ -8,7 +8,7 @@ function AboutPage() {
       <p>Made by: Joe Mama & Gobling Disnuts</p>
       <a href="https://github.com/Germanmtz96/M2-anime-web">Github del Proyecto</a>
       <div id="cards-about">
-    <Card  id='about' style={{ width: '12rem' }}>
+    <Card  id='about' style={{ width: '12rem' , backgroundColor: '#89b4fb'}}>
       <Card.Img variant="top" src="./src/assets/foto-german.jpg" />
       <Card.Body>
       <Card.Title>Germán Martínez</Card.Title>
@@ -20,7 +20,7 @@ function AboutPage() {
         <Card.Link href="https://www.linkedin.com/in/germ%C3%A1n-mart%C3%ADnez-sanch%C3%A9z-a095a4318/">LinkedIn</Card.Link>
       </Card.Body>
     </Card >
-    <Card  id='about' style={{ width: '12rem' }}>
+    <Card  id='about' style={{ width: '12rem' , backgroundColor: '#89b4fb'}}>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
       <Card.Title>Huanye</Card.Title>
