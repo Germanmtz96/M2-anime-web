@@ -1,8 +1,17 @@
 import React from 'react'
 
+import Button from 'react-bootstrap/Button';
+import Overlay from 'react-bootstrap/Overlay';
+
+
+
 function Buscador() {
+
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
+
   return (
-    <div className='buscador'>Buscador</div>
+    <Button  variant="info" className='buscador' >Buscador</Button >
   )
 }
 
