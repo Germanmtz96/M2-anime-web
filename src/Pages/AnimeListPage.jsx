@@ -47,8 +47,8 @@ console.log(animeList)
 
       {animeList.data.map((eachAnime)=>{
         return(
-      <Link to={`/anime-list/${eachAnime.title}`}>
-        <AnimeCard eachAnime={eachAnime}/>
+      <Link   to={`/anime-list/${eachAnime.mal_id}`}>
+        <AnimeCard eachAnime={eachAnime} key={eachAnime.mal_id}/>
       </Link>)
       })
       }

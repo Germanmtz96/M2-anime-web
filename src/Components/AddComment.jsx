@@ -1,30 +1,12 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
-function EditComment(props) {
+function AddComment(props) {
   const [name, setName] = useState("");
   const [score, setScore] = useState(0);
   const [comment, setComment] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    editComment()
-   
-  }
-    const editComment = async ()=>{
-      const editedComment = {
-        mal_id: Number(props.selectedComment.mal_id),
-        id: props.selectedComment.id,
-        name,
-        score,
-        comment,
-      };
-    try {
-      await axios.put(`http://localhost:5005/comments/${props.selectedComment.id}`, editedComment);
-    } catch (error) {
-      console.log(error);
-    }
-    }
 
   function handleName(event) {
     setName(event.target.value);
@@ -35,9 +17,28 @@ function EditComment(props) {
   function handleComment(event) {
     setComment(event.target.value);
   }
-    return (
-    <div className="edit-comment">
-      EditComment
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    postComment()
+  }
+  const postComment = async ()=>{
+    const newComment = {
+      mal_id: Number(props.id),
+      id: Math.floor(Math.random*1000000),
+      name,
+      score,
+      comment,
+    };
+    try {
+      await axios.post(`http://localhost:5005/comments/`,newComment)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  return (
+    <div>
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
         <input type="text" name="name" value={name} onChange={handleName} />
@@ -61,4 +62,4 @@ function EditComment(props) {
   );
 }
 
-export default EditComment;
+export default AddComment;
