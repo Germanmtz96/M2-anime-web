@@ -1,30 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-function AnimeDetailsCard() {
+function AnimeDetailsCard(props) {
+  const [isMoreVisible, setIsMoreVisible] = useState(false);
 
-  const [isMoreVisible,setIsMoreVisible] = useState(false)
-
-  function handleMore (){
-    setIsMoreVisible(!isMoreVisible)
+  function handleMore() {
+    setIsMoreVisible(!isMoreVisible);
   }
 
   return (
-    <div className='anime-details'>
-      AnimeDetailsCard
-    <img src="" alt="" />
-    <h3>Name: </h3>
-    <p>Score: </p>
-
-
+    <div className="anime-details">
+      <img src={props.theAnime.images.jpg.image_url} alt="" />
+      <h3>Name: {props.theAnime.title} </h3>
       <button onClick={handleMore}>More details</button>
-      {isMoreVisible && <article>
-        <p>Characters: </p>
-        <p>Studio: </p>
-        <p>Release date: </p>
-      </article>}
-      
+      {isMoreVisible && (
+        <article>
+          <p>Episodes: {props.theAnime.episodes} </p>
+          <p>Score: {props.theAnime.score} </p>
+          <p>Release year: {props.theAnime.year} </p>
+          <p>Synopsis: {props.theAnime.synopsis}</p>
+          <p>Background: {props.theAnime.Background}</p>
+        </article>
+      )}
     </div>
-  )
+  );
 }
 
-export default AnimeDetailsCard
+export default AnimeDetailsCard;
