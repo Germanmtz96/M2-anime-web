@@ -41,4 +41,18 @@ html *{
   flex-direction: row;
   padding-bottom: 40px;
 }
-
+#formulario-search{
+  margin: 10px;
+}
+#search-btn{
+  margin-top: 10px;
+}
+#lista-animes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
