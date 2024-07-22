@@ -5,20 +5,40 @@
 html *{
   margin: 0;
 }
-
-#nav-logo{
-  width: 100%;
-  background-color: #6b20ee;
-}
 .footer{
   background-color: #6b20ee;
   position: fixed;
   bottom: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
+  height: 32px;
 }
-.footer h3{
-  margin: 0;
+#homepage{
+  
+  margin-bottom: 40px;
 }
+.box {
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+}
+#carousel{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+#title-carousel{
+  margin: 30px;
+  font-family: Arial Black; 
+  font-weight: bold; 
+  font-size: 30px; 
+  color: #5091fb; 
+  text-shadow: 0 1px 0 #89b4fb, 0 2px 0 #c2d8fb, 0 3px 0 #89b4fb, 0 4px 0 #89b4fb, 0 5px 0 #89b4fb, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+#cards-about{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding-bottom: 40px;
+}
+

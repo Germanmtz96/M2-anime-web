@@ -6,13 +6,13 @@ import ErrorPage from "./Pages/ErrorPage";
 import Error2Page from "./Pages/Error2Page"
 import HomePage from "./Pages/HomePage";
 import AnimeListPage from "./Pages/AnimeListPage";
-import Navbar from "./Components/Navbar";
+import MyNavbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <MyNavbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />

@@ -3,6 +3,8 @@ import Tendencias from "../Components/Tendencias";
 import { Link } from "react-router-dom";
 import UltimosComentarios from "../Components/UltimosComentarios";
 import axios from "axios";
+import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
 
 function HomePage() {
   const [tendenciasArr, setTendenciasArr] = useState(null);
@@ -27,14 +29,19 @@ function HomePage() {
 
   return (
     <div id="homepage">
-      <p>HomePage</p>
+      <h2 id='title-carousel'>Top 25 anime</h2>
+      <Carousel data-bs-theme="dark" id="carousel">
        {tendenciasArr.data.map((eachTendencia,index) => {
-        return <Tendencias key={index} eachTendencia={eachTendencia} />;
+        return(
+        <Carousel.Item key={index} >
+        <Tendencias  eachTendencia={eachTendencia}/>
+        </Carousel.Item>)
       })} 
+      </Carousel>
       <UltimosComentarios />
 
-      <Link to="/anime-list">
-        <button id="btn-ir-contenido"> Ir al contenido</button>
+      <Link to="/anime-list">  
+        <Button variant="outline-info" size="lg" id="btn-ir-contenido"> Ir al contenido</Button  >  
       </Link>
     </div>
   );
