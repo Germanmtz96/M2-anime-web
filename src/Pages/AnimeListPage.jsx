@@ -10,7 +10,6 @@ import Button from 'react-bootstrap/Button';
 
 function AnimeListPage() {
   const [filterIsVisible, setFilterIsVisible] = useState(false);
-  const [searchIsVisible, setSearchIsVisible] = useState(false);
   const [animeList, setAnimeList] = useState(null)
 
   const getData = async () =>{
@@ -30,23 +29,20 @@ function AnimeListPage() {
     return  <h3>... Cargando</h3>
   }
 
-  function handleSearchButton() {
-    setSearchIsVisible(!searchIsVisible);
-  }
   function handleFilterButton() {
     setFilterIsVisible(!filterIsVisible);
   }
-console.log(animeList)
+
   return (
     <div id="anime-list">
       <Button id="search-btn" variant="outline-info" onClick={handleFilterButton}>Busqueda avanzada</Button>
 
-      {filterIsVisible && <Formulario />}
+      {filterIsVisible && <Formulario animeList={animeList} setAnimeList={setAnimeList} />}
 
     <section id="lista-animes">
-      {animeList.data.map((eachAnime)=>{
+      {animeList.data.map((eachAnime, index)=>{
         return(
-      <Link   to={`/anime-list/${eachAnime.mal_id}`}>
+      <Link   key={index} to={`/anime-list/${eachAnime.mal_id}`}>
         <AnimeCard eachAnime={eachAnime} key={eachAnime.mal_id}/>
       </Link>)
       })

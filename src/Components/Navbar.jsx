@@ -7,15 +7,20 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Buscador from './Buscador';
 
 
 function MyNavbar() {
+
+
+
   return (
     
 
 <Navbar id="navbar" expand="lg" style={{ backgroundColor: '#6b20ee' }} data-bs-theme="dark">
 <Container fluid>
-  <Navbar.Brand as={Link} to="/"><img src={logo} height={40} /></Navbar.Brand>
+  <Navbar.Brand as={Link} to="/"><img src={logo} height={40} /></Navbar.Brand>  
+     <Buscador/> 
   <Navbar.Toggle aria-controls="navbarScroll" />
   <Navbar.Collapse id="navbarScroll">
     <Nav
@@ -28,15 +33,6 @@ function MyNavbar() {
       <Nav.Link as={Link} to="/anime-list">Todos los Animes</Nav.Link>
       <Nav.Link as={Link} to="/about">About</Nav.Link>
     </Nav>
-    <Form className="d-flex">
-      <Form.Control
-        type="search"
-        placeholder="Buscar"
-        className="me-2"
-        aria-label="Search"
-      />
-      <Button variant="outline-info">Buscar</Button>
-    </Form>
   </Navbar.Collapse>
 </Container>
 </Navbar>
