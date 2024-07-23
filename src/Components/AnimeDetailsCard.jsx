@@ -18,7 +18,7 @@ function AnimeDetailsCard(props) {
           <p>Score: {props.theAnime.score} </p>
           <p>Release year: {props.theAnime.year} </p>
           <p>Synopsis: {props.theAnime.synopsis}</p>
-          <p>Background: {props.theAnime.Background}</p>
+          <p>Background: {props.theAnime.background}</p>
         </article>
       )}
     </div>

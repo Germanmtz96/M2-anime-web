@@ -6,9 +6,11 @@ function EditComment(props) {
   const [score, setScore] = useState(0);
   const [comment, setComment] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    editComment()
+    await editComment()
+    props.getCommentArr()
+    props.handleEditButtom()
    
   }
     const editComment = async ()=>{
