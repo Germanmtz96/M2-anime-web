@@ -1,65 +1,71 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-
-import { useSearchParams } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Buscador() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [animeArr, setAnimeArr] = useState(null);
+  const [filteredArr, setFilteredArr] = useState([]);
 
-  const [queries , setQueries] = useSearchParams()
-  const [searchAnime, setSearchAnime] = useState(null)
-
-  const title = queries.get("title")
-
-
-    useEffect(()=>{
-      getData()
-    },[])
-
-    const handleSearch = (event) => {setSearchAnime(event.target.value) 
- 
-      const filteredArr = searchAnime.filter((eachAnime)=>{
-        return eachAnime.title.startsWith(event.target.value)
-      })
-      
-
-    }
-      
-    
-
-  
-
-    const getData = async ()=>{
+  useEffect(() => {
+    const getData = async () => {
       try {
-        const response = await axios.get("https://api.jikan.moe/v4/anime")
-        setAnimeArr(response.data)
+        const response = await axios.get("https://api.jikan.moe/v4/anime");
+        setAnimeArr(response.data.data);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    }
+    };
+    getData();
+  }, []);
 
-    if(animeArr === null){
-      return <h3>... Cargando</h3>
-    }
+  useEffect(() => {
+    if (animeArr) {
+      const delayDebounceFn = setTimeout(() => {
+        if (searchTerm === "") {
+          setFilteredArr([]);
+        } else {
+          const filtered = animeArr.filter((eachAnime) =>
+            eachAnime.title.toLowerCase().startsWith(searchTerm.toLowerCase())
+          );
+          setFilteredArr(filtered);
+        }
+      }, 3000); // Reduced debounce delay to 500ms
 
- 
+      return () => clearTimeout(delayDebounceFn);
+    }
+  }, [searchTerm, animeArr]);
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  if (animeArr === null) {
+    return <h3>... Cargando</h3>;
+  }
 
   return (
-
-    <Form className="d-flex">
-    <Form.Control
-        type="search"
-        placeholder="Buscar"
-        className="me-2"
-        aria-label="Search"
-         onChange={handleSearch}
-        value={searchAnime} 
+    <div>
+      <input
+        autoFocus
+        type="text"
+        autoComplete="off"
+        className="live-search-field"
+        placeholder="Search here..."
+        onChange={handleSearch}
+        value={searchTerm}
       />
-      <Button variant="outline-info" >Buscar</Button>
-    </Form>
-
-  )
+      <ul>
+        {filteredArr.map((anime) => {
+          return (
+            <Link to={`/anime-list/${anime.mal_id}`}>
+              <li key={anime.mal_id}>{anime.title}</li>
+            </Link>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
 
-export default Buscador
+export default Buscador;
