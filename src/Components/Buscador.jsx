@@ -9,6 +9,7 @@ function Buscador() {
 
   const [queries , setQueries] = useSearchParams()
   const [searchAnime, setSearchAnime] = useState(null)
+  const [animeArr, setAnimeArr] = useState(null)
 
   const title = queries.get("title")
 
