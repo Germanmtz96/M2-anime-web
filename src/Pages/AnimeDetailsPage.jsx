@@ -33,7 +33,7 @@ function AnimeDetailsPage() {
   };
   const getCommentArr = async () => {
     try {
-      const response = await axios.get("http://localhost:5005/comments");
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/comments`);
       setCommentArr(response.data);
     } catch (error) {
       console.log(error);
