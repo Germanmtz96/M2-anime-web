@@ -5,39 +5,52 @@ import { Link } from "react-router-dom";
 function Buscador() {
   const [searchTerm, setSearchTerm] = useState("");
   const [animeArr, setAnimeArr] = useState(null);
-  const [filteredArr, setFilteredArr] = useState([]);
+  const [filteredArr,setFilteredArr ] = useState([])
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get("https://api.jikan.moe/v4/anime");
-        setAnimeArr(response.data.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getData();
-  }, []);
-
+  //get animes Array function
+  const getAnimes = async () =>{
+    try {
+      const response = await axios.get(`https://api.jikan.moe/v4/anime?q=${searchTerm}`)
+      setAnimeArr(response.data.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(()=>{
+    if (searchTerm) {
+      getAnimes();
+    } else {
+      setAnimeArr([]);
+      setFilteredArr([]);
+    }
+  },[searchTerm])
+  
+  
+  // filter response by searchTerm and get 5 titles with timeout 
   useEffect(() => {
     if (animeArr) {
       const delayDebounceFn = setTimeout(() => {
         if (searchTerm === "") {
-          setFilteredArr([]);
+          setFilteredArr([])
         } else {
           const filtered = animeArr.filter((eachAnime) =>
             eachAnime.title.toLowerCase().startsWith(searchTerm.toLowerCase())
-          );
-          setFilteredArr(filtered);
-        }
-      }, 3000); // Reduced debounce delay to 500ms
+          
+        );
+        console.log(filtered)
+        setFilteredArr(filtered.slice(0,5));
+        console.log(filteredArr)
+      }
+    }, 3000); 
+    
+    return () => clearTimeout(delayDebounceFn);
+  }
+}, [searchTerm, animeArr]);
 
-      return () => clearTimeout(delayDebounceFn);
-    }
-  }, [searchTerm, animeArr]);
-
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
+//funciones
+const handleSearch = (event) => {
+  setSearchTerm(event.target.value);
+    console.log(searchTerm)
   };
 
   if (animeArr === null) {
@@ -50,7 +63,6 @@ function Buscador() {
         autoFocus
         type="text"
         autoComplete="off"
-        className="live-search-field"
         placeholder="Search here..."
         onChange={handleSearch}
         value={searchTerm}
