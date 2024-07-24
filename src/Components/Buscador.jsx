@@ -54,10 +54,10 @@ function Buscador() {
         placeholder="Buscar"
         className="me-2"
         aria-label="Search"
-         onChange={handleSearch}
+        onChange={handleSearch}
         value={searchAnime} 
       />
-      <Button variant="outline-info" >Buscar</Button>
+      <Button variant="light" >Buscar</Button>
     </Form>
 
   )

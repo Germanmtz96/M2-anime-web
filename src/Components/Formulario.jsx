@@ -62,7 +62,7 @@ console.log(animeList.data)
   return (
     <div id='formulario-search'>
 <Dropdown className="d-inline mx-2"  onSelect={handleSelect(setGenre)} >
-        <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info'>
+        <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info' style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
         Géneros
         </Dropdown.Toggle>
 
@@ -110,7 +110,7 @@ console.log(animeList.data)
       </Dropdown>
 
       <Dropdown className="d-inline mx-2"  onSelect={handleSelect(setStatus)} >
-        <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info'>
+        <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info' style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
         Estado
         </Dropdown.Toggle>
 
@@ -121,7 +121,7 @@ console.log(animeList.data)
       </Dropdown>
 
       <Dropdown className="d-inline mx-2"  onSelect={handleSelect(setOrder)} >
-        <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info'>
+        <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info' style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
         Orden
         </Dropdown.Toggle>
 
@@ -133,7 +133,7 @@ console.log(animeList.data)
       </Dropdown>
 
       <Dropdown className="d-inline mx-2"  onSelect={handleSelect(setYear)} >
-        <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info'>
+        <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info' style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
         Año
         </Dropdown.Toggle>
 

@@ -35,7 +35,7 @@ function AnimeListPage() {
 
   return (
     <div id="anime-list">
-      <Button id="search-btn" variant="outline-info" onClick={handleFilterButton}>Busqueda avanzada</Button>
+      <Button id="search-btn" variant="outline-info" onClick={handleFilterButton} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Busqueda avanzada</Button>
 
       {filterIsVisible && <Formulario animeList={animeList} setAnimeList={setAnimeList} />}
 
@@ -43,7 +43,7 @@ function AnimeListPage() {
       {animeList.data.map((eachAnime, index)=>{
         return(
       <Link   key={index} to={`/anime-list/${eachAnime.mal_id}`}>
-        <AnimeCard eachAnime={eachAnime} key={eachAnime.mal_id}/>
+        <AnimeCard eachAnime={eachAnime} key={eachAnime.mal_id} />
       </Link>)
       })
       }
