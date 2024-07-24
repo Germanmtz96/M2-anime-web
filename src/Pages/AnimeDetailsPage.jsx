@@ -59,7 +59,7 @@ function AnimeDetailsPage() {
           getCommentArr={getCommentArr}
         />
       )}
-      <div id="list-comentarios">
+      <div id="lista-comentarios">
         {commentArr
           .filter((eachComment) => eachComment.mal_id === parseInt(params.id))
           .map((selectedComment) => {
