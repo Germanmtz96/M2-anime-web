@@ -1,0 +1,28 @@
+{
+   "comments": [
+    {
+      "mal_id": 20,
+      "id": "1234a",
+      "name": "Pepe dos",
+      "score": 5,
+      "comment": "meh notah mal",
+      "title": "Naruto"
+    },
+    {
+      "mal_id": 15,
+      "id": "1234afssd",
+      "name": "Pepe uno",
+      "score": 2,
+      "comment": "anime para seres inferiores",
+      "title": "Eyeshield 21"
+    },
+    {
+      "mal_id": 1,
+      "id": "grroDmR",
+      "name": "pepe tres",
+      "score": "3",
+      "comment": "ffffff",
+      "title": "Cowboy Bebop"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# le pide a git y a github que ignore estas carpetas y archivos
+
+node_modules
+.env
