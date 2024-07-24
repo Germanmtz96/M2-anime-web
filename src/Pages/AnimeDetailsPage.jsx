@@ -11,13 +11,12 @@ function AnimeDetailsPage() {
   const [commentArr, setCommentArr] = useState(null);
   const [formIsOpen, setFormIsOpen] = useState(false);
   const params = useParams();
-  
-  
+
   useEffect(() => {
     getAnime();
     getCommentArr();
-  }, []);
-  
+  }, [params.id]);
+
   function handleAdd() {
     setFormIsOpen(!formIsOpen);
   }
@@ -45,16 +44,22 @@ function AnimeDetailsPage() {
   if (commentArr === null) {
     return <h3>Loading comments ...</h3>;
   }
-   console.log(commentArr)
+  console.log(commentArr);
 
   return (
     <div className="anime-details">
       <AnimeDetailsCard theAnime={theAnime} />
-      
-      <button onClick={handleAdd}>Add comment</button>
-      {formIsOpen && <AddComment id={params.id} />}
 
-      
+      <button onClick={handleAdd}>Add comment</button>
+      {formIsOpen && (
+        <AddComment
+          id={params.id}
+          handleAdd={handleAdd}
+          setCommentArr={setCommentArr}
+          getCommentArr={getCommentArr}
+        />
+      )}
+
       {commentArr
         .filter((eachComment) => eachComment.mal_id === parseInt(params.id))
         .map((selectedComment) => {
@@ -64,6 +69,7 @@ function AnimeDetailsPage() {
               selectedComment={selectedComment}
               commentArr={commentArr}
               id={params.id}
+              getCommentArr={getCommentArr}
             />
           );
         })}

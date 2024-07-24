@@ -3,10 +3,13 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 
 function AddComment(props) {
+  // props = id={params.id} handleAdd()  
+
   const [name, setName] = useState("");
   const [score, setScore] = useState(0);
   const [comment, setComment] = useState("");
 
+  
 
   function handleName(event) {
     setName(event.target.value);
@@ -18,39 +21,50 @@ function AddComment(props) {
     setComment(event.target.value);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault()
-    postComment()
+  const handleSubmit=async (event)=> {
+    event.preventDefault();
+    await postComment();
+    props.handleAdd();
+    props.getCommentArr();
+
   }
-  const postComment = async ()=>{
+  const postComment = async () => {
     const newComment = {
       mal_id: Number(props.id),
-      id: Math.floor(Math.random*1000000),
+      id: Math.floor(Math.random() * 1000000),
       name,
       score,
       comment,
     };
     try {
-      await axios.post(`http://localhost:5005/comments/`,newComment)
+      await axios.post(`http://localhost:5005/comments/`, newComment);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
-        <label>Score:</label>
         <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={handleName}
+          placeholder="	Name"
+        />
+
+        <input
+          placeholder="Score"
           type="number"
+          min="0"
+          max="10"
           name="score"
           value={score}
           onChange={handleScore}
         />
-        <label>Comment:</label>
         <input
+          placeholder="Comment"
           type="text"
           name="comment"
           value={comment}
