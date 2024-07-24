@@ -24,5 +24,708 @@
       "comment": "ffffff",
       "title": "Cowboy Bebop"
     }
+  ],
+  "animes": [
+    {
+      "id": 1,
+      "title": "Naruto",
+      "year_of_first_publication": 2002,
+      "still_airing": false,
+      "img": "https://imgur.com/fzZtssi"
+    },
+    {
+      "id": 2,
+      "title": "One Piece",
+      "year_of_first_publication": 1999,
+      "still_airing": true,
+      "img": "https://imgur.com/r6fvis9"
+    },
+    {
+      "id": 3,
+      "title": "Attack on Titan",
+      "year_of_first_publication": 2013,
+      "still_airing": true,
+      "img": "https://imgur.com/A6TvD6l"
+    },
+    {
+      "id": 4,
+      "title": "My Hero Academia",
+      "year_of_first_publication": 2016,
+      "still_airing": true,
+      "img": "https://imgur.com/zlQ9D9e"
+    },
+    {
+      "id": 5,
+      "title": "Demon Slayer",
+      "year_of_first_publication": 2019,
+      "still_airing": true,
+      "img": "https://imgur.com/nJRaL2r"
+    },
+    {
+      "id": 6,
+      "title": "Death Note",
+      "year_of_first_publication": 2006,
+      "still_airing": false,
+      "img": "https://imgur.com/uSX5NX8"
+    },
+    {
+      "id": 7,
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "year_of_first_publication": 2009,
+      "still_airing": false,
+      "img": "https://imgur.com/NnAtlcD"
+    },
+    {
+      "id": 8,
+      "title": "Sword Art Online",
+      "year_of_first_publication": 2012,
+      "still_airing": true,
+      "img": "https://imgur.com/GGltviV"
+    },
+    {
+      "id": 9,
+      "title": "Cowboy Bebop",
+      "year_of_first_publication": 1998,
+      "still_airing": false,
+      "img": "https://imgur.com/3tdrA5H"
+    },
+    {
+      "id": 10,
+      "title": "Steins;Gate",
+      "year_of_first_publication": 2011,
+      "still_airing": false,
+      "img": "https://imgur.com/cVTKj6s"
+    },
+    {
+      "id": 11,
+      "title": "Neon Genesis Evangelion",
+      "year_of_first_publication": 1995,
+      "still_airing": false,
+      "img": "https://imgur.com/1k3yi3n"
+    },
+    {
+      "id": 12,
+      "title": "Tokyo Ghoul",
+      "year_of_first_publication": 2014,
+      "still_airing": false,
+      "img": "https://imgur.com/CxMgwzI"
+    },
+    {
+      "id": 13,
+      "title": "Hunter x Hunter",
+      "year_of_first_publication": 1999,
+      "still_airing": false,
+      "img": "https://imgur.com/C3siUhF"
+    },
+    {
+      "id": 14,
+      "title": "Bleach",
+      "year_of_first_publication": 2004,
+      "still_airing": false,
+      "img": "https://imgur.com/BYpFHfN"
+    },
+    {
+      "id": 15,
+      "title": "Code Geass",
+      "year_of_first_publication": 2006,
+      "still_airing": false,
+      "img": "https://imgur.com/i4wzRsV"
+    },
+    {
+      "id": 16,
+      "title": "Mob Psycho 100",
+      "year_of_first_publication": 2016,
+      "still_airing": true,
+      "img": "https://imgur.com/eNMMv0h"
+    },
+    {
+      "id": 17,
+      "title": "Made in Abyss",
+      "year_of_first_publication": 2017,
+      "still_airing": true,
+      "img": "https://imgur.com/jeJ6CsU"
+    },
+    {
+      "id": 18,
+      "title": "The Promised Neverland",
+      "year_of_first_publication": 2019,
+      "still_airing": false,
+      "img": "https://imgur.com/OBToQis"
+    },
+    {
+      "id": 19,
+      "title": "Parasyte: The Maxim",
+      "year_of_first_publication": 2014,
+      "still_airing": false,
+      "img": "https://imgur.com/WG8I5ut"
+    },
+    {
+      "id": 20,
+      "title": "Black Clover",
+      "year_of_first_publication": 2017,
+      "still_airing": true,
+      "img": "https://imgur.com/wJmHekF"
+    },
+    {
+      "id": 21,
+      "title": "Gintama",
+      "year_of_first_publication": 2005,
+      "still_airing": false,
+      "img": "https://imgur.com/qfS3iJ6"
+    },
+    {
+      "id": 22,
+      "title": "Fate/Zero",
+      "year_of_first_publication": 2011,
+      "still_airing": false,
+      "img": "https://imgur.com/s0VM8Gz"
+    },
+    {
+      "id": 23,
+      "title": "Clannad: After Story",
+      "year_of_first_publication": 2008,
+      "still_airing": false,
+      "img": "https://imgur.com/jDuqsTn"
+    },
+    {
+      "id": 24,
+      "title": "Hellsing",
+      "year_of_first_publication": 2001,
+      "still_airing": false,
+      "img": "https://imgur.com/sjxFKWc"
+    },
+    {
+      "id": 25,
+      "title": "Samurai Champloo",
+      "year_of_first_publication": 2004,
+      "still_airing": false,
+      "img": "https://imgur.com/dYnwkIB"
+    },
+    {
+      "id": 26,
+      "title": "Kakegurui",
+      "year_of_first_publication": 2017,
+      "still_airing": true,
+      "img": "https://imgur.com/H08jVCY"
+    },
+    {
+      "id": 27,
+      "title": "Great Teacher Onizuka",
+      "year_of_first_publication": 1999,
+      "still_airing": false,
+      "img": "https://imgur.com/5JTNCYw"
+    },
+    {
+      "id": 28,
+      "title": "Soul Eater",
+      "year_of_first_publication": 2008,
+      "still_airing": false,
+      "img": "https://imgur.com/IItMcpT"
+    },
+    {
+      "id": 29,
+      "title": "Akira",
+      "year_of_first_publication": 1988,
+      "still_airing": false,
+      "img": "https://imgur.com/nqnbFKY"
+    },
+    {
+      "id": 30,
+      "title": "Berserk",
+      "year_of_first_publication": 1997,
+      "still_airing": false,
+      "img": "https://imgur.com/0A60O7k"
+    },
+    {
+      "id": 31,
+      "title": "Gurren Lagann",
+      "year_of_first_publication": 2007,
+      "still_airing": false,
+      "img": "https://imgur.com/jPvIocb"
+    },
+    {
+      "id": 32,
+      "title": "Elfen Lied",
+      "year_of_first_publication": 2004,
+      "still_airing": false,
+      "img": "https://imgur.com/Hy4hab7"
+    },
+    {
+      "id": 33,
+      "title": "Inuyasha",
+      "year_of_first_publication": 2000,
+      "still_airing": false,
+      "img": "https://imgur.com/qgA7hc0"
+    },
+    {
+      "id": 34,
+      "title": "Mushishi",
+      "year_of_first_publication": 2005,
+      "still_airing": false,
+      "img": "https://imgur.com/ijnkiFZ"
+    },
+    {
+      "id": 35,
+      "title": "Psycho-Pass",
+      "year_of_first_publication": 2012,
+      "still_airing": true,
+      "img": "https://imgur.com/OEj9HOP"
+    },
+    {
+      "id": 36,
+      "title": "No Game No Life",
+      "year_of_first_publication": 2014,
+      "still_airing": false,
+      "img": "https://imgur.com/CQqZOyt"
+    },
+    {
+      "id": 37,
+      "title": "Re:Zero - Starting Life in Another World",
+      "year_of_first_publication": 2016,
+      "still_airing": true,
+      "img": "https://imgur.com/Qg8uc0m"
+    },
+    {
+      "id": 38,
+      "title": "Angel Beats!",
+      "year_of_first_publication": 2010,
+      "still_airing": false,
+      "img": "https://imgur.com/qsGguvT"
+    },
+    {
+      "id": 39,
+      "title": "K-On!",
+      "year_of_first_publication": 2009,
+      "still_airing": false,
+      "img": "https://imgur.com/pJ0mthR"
+    },
+    {
+      "id": 40,
+      "title": "Haruhi Suzumiya",
+      "year_of_first_publication": 2006,
+      "still_airing": false,
+      "img": "https://imgur.com/JX1mQr5"
+    },
+    {
+      "id": 41,
+      "title": "Higurashi When They Cry",
+      "year_of_first_publication": 2006,
+      "still_airing": false,
+      "img": "https://imgur.com/XXrAx2M"
+    },
+    {
+      "id": 42,
+      "title": "Fruits Basket",
+      "year_of_first_publication": 2001,
+      "still_airing": false,
+      "img": "https://imgur.com/ss3qjAg"
+    },
+    {
+      "id": 43,
+      "title": "Yuri!!! on ICE",
+      "year_of_first_publication": 2016,
+      "still_airing": false,
+      "img": "https://imgur.com/rv4eOyp"
+    },
+    {
+      "id": 44,
+      "title": "Black Lagoon",
+      "year_of_first_publication": 2006,
+      "still_airing": false,
+      "img": "https://imgur.com/nieIk4D"
+    },
+    {
+      "id": 45,
+      "title": "Bakemonogatari",
+      "year_of_first_publication": 2009,
+      "still_airing": true,
+      "img": "https://imgur.com/I7xb8D8"
+    },
+    {
+      "id": 46,
+      "title": "Kuroko's Basketball",
+      "year_of_first_publication": 2012,
+      "still_airing": false,
+      "img": "https://imgur.com/otp3QoR"
+    },
+    {
+      "id": 47,
+      "title": "JoJo's Bizarre Adventure",
+      "year_of_first_publication": 2012,
+      "still_airing": true,
+      "img": "https://imgur.com/QfRtXKj"
+    },
+    {
+      "id": 48,
+      "title": "Nanatsu no Taizai",
+      "year_of_first_publication": 2014,
+      "still_airing": false,
+      "img": "https://imgur.com/YtcexSX"
+    },
+    {
+      "id": 49,
+      "title": "The Rising of the Shield Hero",
+      "year_of_first_publication": 2019,
+      "still_airing": true,
+      "img":"https://imgur.com/4Xn4p68"
+    },
+    {
+      "id": 50,
+      "title": "Baccano!",
+      "year_of_first_publication": 2007,
+      "still_airing": false,
+      "img": "https://imgur.com/4JNQeMz"
+    },
+    {
+      "id": 51,
+      "title": "Monster",
+      "year_of_first_publication": 2004,
+      "still_airing": false,
+      "img": "https://imgur.com/Y7oVzTu"
+    },
+    {
+      "id": 52,
+      "title": "Hinamatsuri",
+      "year_of_first_publication": 2018,
+      "still_airing": false,
+      "img": "https://imgur.com/yDD8THl"
+    },
+    {
+      "id": 53,
+      "title": "Welcome to the NHK",
+      "year_of_first_publication": 2006,
+      "still_airing": false,
+      "img": "https://imgur.com/yQhBvqI"
+    },
+    {
+      "id": 54,
+      "title": "Howl's Moving Castle",
+      "year_of_first_publication": 2004,
+      "still_airing": false,
+      "img": "https://imgur.com/4sHxMo2"
+    },
+    {
+      "id": 55,
+      "title": "Samurai X",
+      "year_of_first_publication": 1996,
+      "still_airing": false,
+      "img": "https://imgur.com/kPE8Lgy"
+    },
+    {
+      "id": 56,
+      "title": "D.Gray-man",
+      "year_of_first_publication": 2006,
+      "still_airing": false,
+      "img": "https://imgur.com/SkEyS2G"
+    },
+    {
+      "id": 57,
+      "title": "Beastars",
+      "year_of_first_publication": 2019,
+      "still_airing": true,
+      "img": "https://imgur.com/eXPNVm3"
+    },
+    {
+      "id": 58,
+      "title": "KonoSuba",
+      "year_of_first_publication": 2016,
+      "still_airing": true,
+      "img": "https://imgur.com/K77aShl"
+    },
+    {
+      "id": 59,
+      "title": "Fairy Tail",
+      "year_of_first_publication": 2009,
+      "still_airing": false,
+      "img": "https://imgur.com/KCXSrUa"
+    },
+    {
+      "id": 60,
+      "title": "Dragon Ball Z",
+      "year_of_first_publication": 1989,
+      "still_airing": false,
+      "img": "https://imgur.com/jQoQdH5"
+    },
+    {
+      "id": 61,
+      "title": "Toradora!",
+      "year_of_first_publication": 2008,
+      "still_airing": false,
+      "img": "https://imgur.com/SvtkS9F"
+    },
+    {
+      "id": 62,
+      "title": "Anohana: The Flower We Saw That Day",
+      "year_of_first_publication": 2011,
+      "still_airing": false,
+      "img": "https://imgur.com/f31lxcK"
+    },
+    {
+      "id": 63,
+      "title": "Your Lie in April",
+      "year_of_first_publication": 2014,
+      "still_airing": false,
+      "img": "https://imgur.com/S2QGRNl"
+    },
+    {
+      "id": 64,
+      "title": "Blue Exorcist",
+      "year_of_first_publication": 2011,
+      "still_airing": true,
+      "img": "https://imgur.com/AFJa15x"
+    },
+    {
+      "id": 65,
+      "title": "Noragami",
+      "year_of_first_publication": 2014,
+      "still_airing": true,
+      "img": "https://imgur.com/2TMj7SM"
+    },
+    {
+      "id": 66,
+      "title": "Erased",
+      "year_of_first_publication": 2016,
+      "still_airing": false,
+      "img": "https://imgur.com/fibbpW7"
+    },
+    {
+      "id": 67,
+      "title": "Vinland Saga",
+      "year_of_first_publication": 2019,
+      "still_airing": true,
+      "img": "https://imgur.com/OW4w8wG"
+    },
+    {
+      "id": 68,
+      "title": "Dr. Stone",
+      "year_of_first_publication": 2019,
+      "still_airing": true,
+      "img": "https://imgur.com/pNSF1oR"
+    },
+    {
+      "id": 69,
+      "title": "Fire Force",
+      "year_of_first_publication": 2019,
+      "still_airing": true,
+      "img": "https://imgur.com/4aV5dV5"
+    },
+    {
+      "id": 70,
+      "title": "Goblin Slayer",
+      "year_of_first_publication": 2018,
+      "still_airing": true,
+      "img": "https://imgur.com/A5XWgVX"
+    },
+    {
+      "id": 71,
+      "title": "Fate/stay night: Unlimited Blade Works",
+      "year_of_first_publication": 2014,
+      "still_airing": false,
+      "img": "https://imgur.com/JQiIrMt"
+    },
+    {
+      "id": 72,
+      "title": "Spice and Wolf",
+      "year_of_first_publication": 2008,
+      "still_airing": false,
+      "img": "https://imgur.com/OfqGxHM"
+    },
+    {
+      "id": 73,
+      "title": "Violet Evergarden",
+      "year_of_first_publication": 2018,
+      "still_airing": false,
+      "img": "https://imgur.com/6HHCxoP"
+    },
+    {
+      "id": 74,
+      "title": "Kill la Kill",
+      "year_of_first_publication": 2013,
+      "still_airing": false,
+      "img": "https://imgur.com/W3uQkcV"
+    },
+    {
+      "id": 75,
+      "title": "Puella Magi Madoka Magica",
+      "year_of_first_publication": 2011,
+      "still_airing": false,
+      "img": "https://imgur.com/fGTL6L8"
+    },
+    {
+      "id": 76,
+      "title": "Clannad",
+      "year_of_first_publication": 2007,
+      "still_airing": false,
+      "img": "https://imgur.com/vlRuHRs"
+    },
+    {
+      "id": 77,
+      "title": "March Comes in Like a Lion",
+      "year_of_first_publication": 2016,
+      "still_airing": true,
+      "img": "https://imgur.com/QPR6M94"
+    },
+    {
+      "id": 78,
+      "title": "Dorohedoro",
+      "year_of_first_publication": 2020,
+      "still_airing": true,
+      "img": "https://imgur.com/ojNVsA4"
+    },
+    {
+      "id": 79,
+      "title": "Assassination Classroom",
+      "year_of_first_publication": 2015,
+      "still_airing": false,
+      "img": "https://imgur.com/XhbBERp"
+    },
+    {
+      "id": 80,
+      "title": "Fate/Stay Night",
+      "year_of_first_publication": 2006,
+      "still_airing": false,
+      "img": "https://imgur.com/mTLajgF"
+    },
+    {
+      "id": 81,
+      "title": "Blue Period",
+      "year_of_first_publication": 2021,
+      "still_airing": true,
+      "img": "https://imgur.com/5WycZto"
+    },
+    {
+      "id": 82,
+      "title": "Jujutsu Kaisen",
+      "year_of_first_publication": 2020,
+      "still_airing": true,
+      "img": "https://imgur.com/V2eA6gj"
+    },
+    {
+      "id": 83,
+      "title": "Overlord",
+      "year_of_first_publication": 2015,
+      "still_airing": true,
+      "img": "https://imgur.com/7CUi7GZ"
+    },
+    {
+        "id": 84,
+        "title": "Trigun",
+        "year_of_first_publication": 1998,
+        "still_airing": false,
+        "img": "https://imgur.com/KIDNDt1"
+    },
+    {
+        "id": 85,
+        "title": "Serial Experiments Lain",
+        "year_of_first_publication": 1998,
+        "still_airing": false,
+        "img": "https://imgur.com/BPv50yA"
+    },
+    {
+        "id": 86,
+        "title": "The Seven Deadly Sins",
+        "year_of_first_publication": 2014,
+        "still_airing": true,
+        "img": "https://imgur.com/GT87pB7"
+    },
+    {
+        "id": 87,
+        "title": "Akame ga Kill!",
+        "year_of_first_publication": 2014,
+        "still_airing": false,
+        "img": "https://imgur.com/07W3Jzk"
+    },
+    {
+        "id": 88,
+        "title": "Magi: The Labyrinth of Magic",
+        "year_of_first_publication": 2012,
+        "still_airing": false,
+        "img": "https://imgur.com/i4GmZc5"
+    },
+    {
+        "id": 89,
+        "title": "Black Butler",
+        "year_of_first_publication": 2008,
+        "still_airing": true,
+        "img": "https://imgur.com/xgXXHFH"
+    },
+    {
+        "id": 90,
+        "title": "Terror in Resonance",
+        "year_of_first_publication": 2014,
+        "still_airing": false,
+        "img": "https://imgur.com/lTC1qxq"
+    },
+    {
+        "id": 91,
+        "title": "Charlotte",
+        "year_of_first_publication": 2015,
+        "still_airing": false,
+        "img": "https://imgur.com/kNY4JVO"
+    },
+    {
+        "id": 92,
+        "title": "Kabaneri of the Iron Fortress",
+        "year_of_first_publication": 2016,
+        "still_airing": true,
+        "img": "https://imgur.com/53GeQTJ"
+    },
+    {
+        "id": 93,
+        "title": "Samurai 7",
+        "year_of_first_publication": 2004,
+        "still_airing": false,
+        "img": "https://imgur.com/nLX8R24"
+    },
+    {
+        "id": 94,
+        "title": "Outlaw Star",
+        "year_of_first_publication": 1998,
+        "still_airing": false,
+        "img": "https://imgur.com/U71Hgqv"
+    },
+    {
+        "id": 95,
+        "title": "Wolf's Rain",
+        "year_of_first_publication": 2003,
+        "still_airing": false,
+        "img": "https://imgur.com/et0hmDt"
+    },
+    {
+        "id": 96,
+        "title": "Eureka Seven",
+        "year_of_first_publication": 2005,
+        "still_airing": false,
+        "img": "https://imgur.com/pP1TnE1"
+    },
+    {
+        "id": 97,
+        "title": "Kekkai Sensen",
+        "year_of_first_publication": 2015,
+        "still_airing": true,
+        "img": "https://imgur.com/KPCuG2A"
+    },
+    {
+        "id": 98,
+        "title": "The Ancient Magus' Bride",
+        "year_of_first_publication": 2017,
+        "still_airing": true,
+        "img": "https://imgur.com/llQ7QsO"
+    },
+    {
+        "id": 99,
+        "title": "Miss Kobayashi's Dragon Maid",
+        "year_of_first_publication": 2017,
+        "still_airing": true,
+        "img": "https://imgur.com/80dlGya"
+    },
+    {
+        "id": 100,
+        "title": "Little Witch Academia",
+        "year_of_first_publication": 2017,
+        "still_airing": false,
+        "img": "https://imgur.com/Envwcuj"
+    }
   ]
+  
 }
