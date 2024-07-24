@@ -70,7 +70,7 @@ function AddComment(props) {
           value={comment}
           onChange={handleComment}
         />
-        <button type="submit">Submmit edit</button>
+        <button type="submit">Submmit comment</button>
       </form>
     </div>
   );

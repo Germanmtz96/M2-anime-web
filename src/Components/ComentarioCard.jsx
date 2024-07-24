@@ -76,9 +76,11 @@ function ComentarioCard(props) {
           </div>
         </div>
       </div>
-      <p>Name: {props.selectedComment.name}</p>
-      <p>Score: {props.selectedComment.score}</p>
-      <p>Comment: {props.selectedComment.comment}</p>
+      <div id="single-comment">
+        <p>Name: {props.selectedComment.name}</p>
+        <p>Score: {props.selectedComment.score}</p>
+        <p id="comment-comment">Comment: {props.selectedComment.comment}</p>
+      </div>
     </div>
   );
 }

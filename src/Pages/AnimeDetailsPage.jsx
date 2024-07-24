@@ -59,20 +59,21 @@ function AnimeDetailsPage() {
           getCommentArr={getCommentArr}
         />
       )}
-
-      {commentArr
-        .filter((eachComment) => eachComment.mal_id === parseInt(params.id))
-        .map((selectedComment) => {
-          return (
-            <ComentarioCard
-              key={selectedComment.id}
-              selectedComment={selectedComment}
-              commentArr={commentArr}
-              id={params.id}
-              getCommentArr={getCommentArr}
-            />
-          );
-        })}
+      <div id="list-comentarios">
+        {commentArr
+          .filter((eachComment) => eachComment.mal_id === parseInt(params.id))
+          .map((selectedComment) => {
+            return (
+              <ComentarioCard
+                key={selectedComment.id}
+                selectedComment={selectedComment}
+                commentArr={commentArr}
+                id={params.id}
+                getCommentArr={getCommentArr}
+              />
+            );
+          })}
+      </div>
     </div>
   );
 }

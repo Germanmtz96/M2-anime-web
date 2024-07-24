@@ -13,7 +13,7 @@ function AnimeDetailsCard(props) {
       <h3>Name: {props.theAnime.title} </h3>
       <button onClick={handleMore}>More details</button>
       {isMoreVisible && (
-        <article>
+        <article >
           <p>Episodes: {props.theAnime.episodes} </p>
           <p>Score: {props.theAnime.score} </p>
           <p>Release year: {props.theAnime.year} </p>
