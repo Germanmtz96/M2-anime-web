@@ -2,17 +2,22 @@ import React, { useState } from "react";
 import EditComment from "../Components/EditComment";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
-import { Modal } from "bootstrap";
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function ComentarioCard(props) {
   const [editIsVisible, setEditIsVisible] = useState(false);
 
+  const [openModal, setOpenModal] = useState(false)
+
   function handleEditButtom() {
     setEditIsVisible(!editIsVisible);
+  }
+  function handleDeleteButtom(){
+    setOpenModal(!openModal)
   }
   const handleDelete = async () => {
     await deleteComment();
@@ -21,7 +26,7 @@ function ComentarioCard(props) {
 
   const deleteComment = async () => {
     const commentId = props.selectedComment.id;
-    await axios.delete(`http://localhost:5005/comments/${commentId}`);
+    await axios.delete(`${import.meta.env.VITE_SERVER_URL}/comments/${commentId}`);
   };
 
   if (deleteComment === true) {
@@ -31,47 +36,8 @@ function ComentarioCard(props) {
   return (
     <div className="comment" >
       
-      <div
-        className="modal fade"
-        id="exampleModal"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">
-                Modal title
-              </h5>
-              <Button
-              variant="outline-info"
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </Button>
-            </div>
-            <div className="modal-body">...</div>
-            <div className="modal-footer">
-              <Button
-              variant="outline-info"
-                type="button"
-                className="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </Button>
-              <Button variant="outline-info" type="button" className="btn btn-primary">
-                Save changes
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
+     
+     
       <Card style={{ width: '24rem' ,  backgroundColor: '#89b4fb',width:'100%'}}>
       <Card.Header >
       <Button variant="outline-info" onClick={handleEditButtom} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginRight:'5px', marginTop: '10px'}}>Edit</Button>
@@ -84,7 +50,26 @@ function ComentarioCard(props) {
           handleEditButtom={handleEditButtom}
         />
       )}
-      <Button variant="outline-info" onClick={handleDelete} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginTop: '10px'}}>Delete</Button>
+      <Button variant="outline-info" onClick={handleDeleteButtom} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginTop: '10px'}}>Delete</Button>
+      {openModal && (<div
+      className="modal show"
+      style={{ display: 'block', position: 'initial' }}
+    >
+      <Modal.Dialog>
+        <Modal.Header closeButton onClick={handleDeleteButtom}>
+          <Modal.Title>Delete comment</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>Are you sure you want to delete this comment?</p>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleDeleteButtom}>No</Button>
+          <Button variant="primary" onClick={handleDelete}>Yes</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>)}
       </Card.Header>
       <ListGroup variant="flush">
       <ListGroup.Item style={{backgroundColor: '#c2d8fb' , border:' 1px solid #5091fb'}}>Name: {props.selectedComment.name}</ListGroup.Item>

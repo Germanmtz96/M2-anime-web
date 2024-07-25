@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from "react-router-dom";
 
 function AddComment(props) {
   // props = id={params.id} handleAdd()  
@@ -11,7 +12,7 @@ function AddComment(props) {
   const [name, setName] = useState("");
   const [score, setScore] = useState(0);
   const [comment, setComment] = useState("");
-
+  const navigate = useNavigate
   
 
   function handleName(event) {
@@ -40,16 +41,17 @@ function AddComment(props) {
       comment,
     };
     try {
-      await axios.post(`http://localhost:5005/comments/`, newComment);
+      await axios.post(`${import.meta.env.VITE_SERVER_URL}/comments/`, newComment);
     } catch (error) {
       console.log(error);
+      navigate("/error")
     }
   };
 
   return (
       <Form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', justifyContent:'center', alignItems: 'center', flexWrap: 'wrap', marginTop:'20px', width:'98%'}}>
       <Form.Group className="mb-3" controlId="formNameAdd">
-        <Form.Label >Usuario</Form.Label>
+        <Form.Label >User</Form.Label>
         <Form.Control onChange={handleName} type="text" name="name" value={name} placeholder="Enter name" style={{width:'240px', marginRight:'94px'}}/>
       </Form.Group>
         
@@ -63,7 +65,7 @@ function AddComment(props) {
         <Form.Control as="textarea" rows={3} onChange={handleComment} type="text" name="comment" value={comment} placeholder="Enter Comment" style={{width:'380px'}}/>
       </Form.Group>
         
-        <Button variant="outline-info" type="submit" style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginBottom:'40px'}}>Submmit edit</Button >
+        <Button variant="outline-info" type="submit" style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginBottom:'40px'}}>Submit edit</Button >
       </Form>
   );
 }

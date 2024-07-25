@@ -2,10 +2,12 @@ import React, { useEffect } from "react";
 import Formulario from "../Components/Formulario";
 import AnimeCard from "../Components/AnimeCard";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import { BounceLoader } from "react-spinners";
 import Button from "react-bootstrap/Button";
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 function AnimeListPage() {
   const [filterIsVisible, setFilterIsVisible] = useState(false);
@@ -14,16 +16,17 @@ function AnimeListPage() {
   const [inputPage, setInputPage] = useState(currentPage);
   const [status, setStatus] = useState("");
   const [genre, setGenre] = useState("");
-
+  const navigate = useNavigate()
+  
   const getData = async () => {
     try {
       const response = await axios.get(
         `https://api.jikan.moe/v4/anime?page=${currentPage}&status=${status}&genres=${genre}`
       );
       setAnimeList(response.data);
-      console.log(response.data)
     } catch (error) {
       console.log(error);
+      navigate("/error")
     }
   };
 
@@ -32,7 +35,12 @@ function AnimeListPage() {
   }, [currentPage,status,genre]);
 
   if (animeList === null) {
-    return <h3>... Cargando</h3>;
+    return (
+      <div>
+        <BounceLoader className="spinner" size={150} aria-label="Loading Spinner" ></BounceLoader>
+        <h3> Loading ... </h3>;
+      </div>
+    );
   }
 
   function handleFilterButtonIsVisible() {
@@ -59,11 +67,12 @@ function AnimeListPage() {
   return (
     <div id="anime-list">
       <Button
+        style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}
         id="search-btn"
         variant="outline-info"
         onClick={handleFilterButtonIsVisible}
       >
-        Busqueda avanzada
+        Advanced filters
       </Button>
 
       {filterIsVisible && (
@@ -79,18 +88,20 @@ function AnimeListPage() {
           );
         })}
       </section>
-      <div id="pagination">
-      <button onClick={handleBefore}>Before</button>
-        <input
+      <div id="pagination" style={{display:'flex', flexDirection:'row', padding:'10px',}}>
+      <Button onClick={handleBefore} style={{height:'40px', backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Before</Button>
+      <InputGroup className="mb-3" style={{height:'40px',width:'140px', marginLeft:'10px',marginRight:'10px'}}>
+      <Form.Control
           type="number"
           onChange={handlePageChange}
           value={inputPage}
           min={1}
         />
-        <button type="button" onClick={handlePageSubmit}>
+      </InputGroup>
+        <Button type="button" onClick={handlePageSubmit} style={{height:'40px',backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginRight:'10px'}}>
           Go to page
-        </button>
-        <button onClick={handleNext}>Next</button>
+        </Button>
+        <Button onClick={handleNext} style={{height:'40px', backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Next</Button>
       </div>
     </div>
   );
