@@ -16,10 +16,14 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/*" element={<ErrorPage />} />
-        <Route path="/undefined" element={<Error2Page />} />
+       
+       
         <Route path="/anime-list/:id" element={<AnimeDetailsPage />} />
         <Route path="/anime-list" element={<AnimeListPage />} />
+
+        <Route path="/error" element={<Error2Page />} />
+        <Route path="*" element={<ErrorPage />} />
+
       </Routes>
       <Footer />
     </>

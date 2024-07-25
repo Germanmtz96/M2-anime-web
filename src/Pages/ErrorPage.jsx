@@ -2,7 +2,7 @@ import React from 'react'
 
 function ErrorPage() {
   return (
-    <div id='error'>ErrorPage</div>
+    <div id='error'>Estas perdido</div>
   )
 }
 
