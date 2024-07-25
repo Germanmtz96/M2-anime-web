@@ -28,13 +28,13 @@ function HomePage() {
   return (
     <div id="homepage">
       <Link to="/anime-list">
-        <Button variant="outline-info" size="lg" id="btn-ir-contenido">
+        <Button variant="outline-info" size="lg" id="btn-ir-contenido" style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
           {" "}
           Ir al contenido
         </Button>
       </Link>
       <h2 id="title-carousel">Top 25 anime</h2>
-      <Carousel data-bs-theme="dark" id="carousel">
+      <Carousel data-bs-theme="dark" id="carousel" >
         {tendenciasArr.data.map((eachTendencia, index) => {
           return (
             <Carousel.Item key={index}>

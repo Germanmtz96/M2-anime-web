@@ -11,8 +11,13 @@ import Modal from 'react-bootstrap/Modal';
 function ComentarioCard(props) {
   const [editIsVisible, setEditIsVisible] = useState(false);
 
+  const [openModal, setOpenModal] = useState(false)
+
   function handleEditButtom() {
     setEditIsVisible(!editIsVisible);
+  }
+  function handleDeleteButtom(){
+    setOpenModal(!openModal)
   }
   const handleDelete = async () => {
     await deleteComment();
@@ -31,25 +36,7 @@ function ComentarioCard(props) {
   return (
     <div className="comment" >
       
-      <div
-      className="modal show"
-      style={{ display: 'block', position: 'initial' }}
-    >
-      <Modal.Dialog>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          <p>Modal body text goes here.</p>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
-        </Modal.Footer>
-      </Modal.Dialog>
-    </div>
+     
      
       <Card style={{ width: '24rem' ,  backgroundColor: '#89b4fb',width:'100%'}}>
       <Card.Header >
@@ -63,7 +50,26 @@ function ComentarioCard(props) {
           handleEditButtom={handleEditButtom}
         />
       )}
-      <Button variant="outline-info" onClick={handleDelete} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginTop: '10px'}}>Delete</Button>
+      <Button variant="outline-info" onClick={handleDeleteButtom} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginTop: '10px'}}>Delete</Button>
+      {openModal && (<div
+      className="modal show"
+      style={{ display: 'block', position: 'initial' }}
+    >
+      <Modal.Dialog>
+        <Modal.Header closeButton onClick={handleDeleteButtom}>
+          <Modal.Title>Delete comment</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>Are you sure you want to delete this comment?</p>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleDeleteButtom}>No</Button>
+          <Button variant="primary" onClick={handleDelete}>Yes</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>)}
       </Card.Header>
       <ListGroup variant="flush">
       <ListGroup.Item style={{backgroundColor: '#c2d8fb' , border:' 1px solid #5091fb'}}>Name: {props.selectedComment.name}</ListGroup.Item>

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import ListGroup from 'react-bootstrap/ListGroup';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 function Buscador() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -60,15 +62,18 @@ const handleSearch = (event) => {
   }
 
   return (
-    <div>
-      <input
-        autoFocus
-        type="text"
-        autoComplete="off"
-        placeholder="Search here..."
-        onChange={handleSearch}
-        value={searchTerm}
-      />
+    <div style={{marginRight:'20px',marginTop:'18px'}}>
+      <InputGroup className="mb-3" style={{width:'166px'}}>
+      <Form.Control
+          autoFocus
+          type="text"
+          autoComplete="off"
+          placeholder="Search here..."
+          onChange={handleSearch}
+          value={searchTerm}
+        />
+      </InputGroup>
+      
       <ListGroup>
         {filteredArr.map((anime) => {
           return (

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import Button from "react-bootstrap/Button";
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 function AnimeListPage() {
   const [filterIsVisible, setFilterIsVisible] = useState(false);
@@ -79,18 +81,20 @@ function AnimeListPage() {
           );
         })}
       </section>
-      <div id="pagination">
-      <button onClick={handleBefore}>Before</button>
-        <input
+      <div id="pagination" style={{display:'flex', flexDirection:'row', padding:'10px',}}>
+      <Button onClick={handleBefore} style={{height:'40px', backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Before</Button>
+      <InputGroup className="mb-3" style={{height:'40px',width:'180px', marginLeft:'10px',marginRight:'10px'}}>
+      <Form.Control
           type="number"
           onChange={handlePageChange}
           value={inputPage}
           min={1}
         />
-        <button type="button" onClick={handlePageSubmit}>
+      </InputGroup>
+        <Button type="button" onClick={handlePageSubmit} style={{height:'40px',backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginRight:'10px'}}>
           Go to page
-        </button>
-        <button onClick={handleNext}>Next</button>
+        </Button>
+        <Button onClick={handleNext} style={{height:'40px', backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Next</Button>
       </div>
     </div>
   );
