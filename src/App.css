@@ -2,10 +2,10 @@
   margin: 0 0;
   text-align: center;
 }
-html *{
+html * {
   margin: 0;
 }
-.footer{
+.footer {
   background-color: #6b20ee;
   position: fixed;
   bottom: 0;
@@ -15,39 +15,102 @@ html *{
   width: 100%;
   height: 36px;
 }
-#homepage{
-  
+#homepage {
   margin-bottom: 40px;
 }
 .box {
   background-color: rgb(255 255 255 / 30%);
   backdrop-filter: blur(10px);
 }
-#carousel{
+#carousel {
   margin-left: 4rem;
   margin-right: 4rem;
 }
-#title-carousel{
-  margin: 30px;
-  font-family: Arial Black; 
-  font-weight: bold; 
-  font-size: 30px; 
-  color: #5091fb; 
-  text-shadow: 0 1px 0 #89b4fb, 0 2px 0 #c2d8fb, 0 3px 0 #89b4fb, 0 4px 0 #89b4fb, 0 5px 0 #89b4fb, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+#title-carousel {
+  margin: 5px 0 20px 0;
+  font-family: Arial Black;
+  font-weight: bold;
+  font-size: 30px;
+  color: #5091fb;
+  text-shadow: 0 1px 0 #89b4fb, 0 2px 0 #c2d8fb, 0 3px 0 #89b4fb,
+    0 4px 0 #89b4fb, 0 5px 0 #89b4fb, 0 6px 1px rgba(0, 0, 0, 0.1),
+    0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
-#cards-about{
+
+#carousel-coment img {
+  height: 150px;
+  width: 300px;
+}
+#carousel-coment {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-left: 30px;
+  padding-top: 10px;
+}
+#ult-com-caption{
+  width: 200px;
+  height: 150px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0px;
+}
+#ult-com-caption p {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  padding-left: 20px;
+  text-align: start;
+  margin: 2px;
+}
+ #last-comments-title{
+  margin:10px 0 0 0;
+ }
+ #comment-comment{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+  overflow: hidden;
+ }
+ #single-comment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+ }
+ #single-comment p{
+  margin: 0;
+ }
+#ult-com-comment{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+}
+#btn-ir-contenido{
+  margin: 15px 0 5px 0;
+}
+#cards-about {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   padding-bottom: 40px;
 }
-#formulario-search{
+#formulario-search {
   margin: 10px;
 }
-#search-btn{
+#search-btn {
   margin-top: 10px;
 }
-#lista-animes{
+#lista-animes {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -56,6 +119,7 @@ html *{
   margin-top: 10px;
   margin-bottom: 40px;
 }
+<<<<<<< HEAD
 
 #anime-details-container{
   margin-bottom: 40px;
@@ -63,3 +127,25 @@ html *{
 .comment{
   margin: 10px;
 }
+=======
+.card-title{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card-title h5{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#lista-animes{
+  display: flex;
+  flex-wrap: wrap;
+}
+#list-comentarios{
+  margin-bottom:30px ;
+}
+#pagination{
+  margin-bottom: 40px;
+}
+>>>>>>> huanye

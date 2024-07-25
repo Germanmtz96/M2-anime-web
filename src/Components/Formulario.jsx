@@ -1,65 +1,38 @@
-import React, { useEffect, useState } from 'react'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
-import Dropdown from 'react-bootstrap/Dropdown';
-
+import Dropdown from "react-bootstrap/Dropdown";
 
 function Formulario(props) {
- 
-  const {animeList , setAnimeList} = props
+  const { currentPage, setAnimeList, status, setStatus, setGenre, genre } =
+    props;
 
-    const [genre, setGenre] = useState('');
-    const [status, setStatus] = useState('');
-    const [order, setOrder] = useState('');
-    const [year, setYear] = useState('');
+  useEffect(() => {
+    if (status !== "" || genre !== "") {
+      getData();
+    }
+  }, [status, currentPage, genre]);
 
-    const [filteredData, setFilteredData] = useState(animeList.data)
-console.log(animeList.data)
-    const performSearch = () => {
-      let filter = animeList;
-  
-      if (genre) {
-        filter = filteredData.filter(animeList.data.genres.name === genre);
-      }else if(genre){
-        filteredData.filter(animeList.data.explicit_genres.name === genre);
-      }else if(genre){
-        filteredData.filter(animeList.data.demographics.name === genre);
-      }else if(genre){
-        filteredData.filter(animeList.data.themes.name === genre);
-      }
-
-       if (status) {
-        filter = filteredData.filter(item => item.status === status);
-      }
-      if (order) {
-        
-        if (order === 'Nombre A-Z') {
-          filter = filteredData.sort((a, b) => a.animeList.data.title.localeCompare(b.animeList.data.title));
-        } else if (order === 'Actualizados') {
-          filter = filteredData.sort((a, b) => new Date(b.animeList.data.aired.to.day) - new Date(a.updated_at));
-        } else if (order === 'Calificación') {
-          filter = filteredData.sort((a, b) => b.animeList.data.score - a.animeList.data.score);
-        }
-      }
-      if (year) {
-        filter = filteredData.filter(animeList.data.aired.prop.from.year === Number(year)); 
-      }
-  
-      setFilteredData(filter);
-    };
-    const handleSelect = (setter) => (eventKey) => {
-      setter(eventKey);
-      
-      performSearch();
-    }; 
-    useEffect(()=>{
-      performSearch()
-    },[genre, status, order, year])
-
-    
-    //genres.name. , explicit_genres.name , themes.name , demographics.name
-
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        `https://api.jikan.moe/v4/anime?page=${currentPage}&status=${status}&genres=${genre}`
+      );
+      setAnimeList(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleDropdownStatus = (status) => {
+    setStatus(status);
+  };
+  const handleDropdownGenre = (genre) => {
+    setGenre(genre);
+  };
 
   return (
+<<<<<<< HEAD
     <div id='formulario-search'>
 <Dropdown className="d-inline mx-2"  onSelect={handleSelect(setGenre)} >
         <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info' style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
@@ -113,12 +86,19 @@ console.log(animeList.data)
         <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info' style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
         Estado
         </Dropdown.Toggle>
+=======
+    <div id="formulario-search">
+      {/* Status */}
+      <Dropdown className="d-inline mx-2" onSelect={handleDropdownStatus}>
+        <Dropdown.Toggle variant="outline-info">Status</Dropdown.Toggle>
+>>>>>>> huanye
 
         <Dropdown.Menu>
-          <Dropdown.Item eventKey="true">En emisión</Dropdown.Item>
-          <Dropdown.Item eventKey="false">Finalizado</Dropdown.Item>
+          <Dropdown.Item eventKey="airing">Airing</Dropdown.Item>
+          <Dropdown.Item eventKey="complete">Completed</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
+<<<<<<< HEAD
 
       <Dropdown className="d-inline mx-2"  onSelect={handleSelect(setOrder)} >
         <Dropdown.Toggle id="dropdown-autoclose-true" variant='outline-info' style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
@@ -171,10 +151,41 @@ console.log(animeList.data)
           <Dropdown.Item eventKey="1994">1994</Dropdown.Item>
           <Dropdown.Item eventKey="1993">1993</Dropdown.Item>
           <Dropdown.Item eventKey="1992">1992</Dropdown.Item>
+=======
+      {/*genre*/}
+      <Dropdown className="d-inline mx-2" onSelect={handleDropdownGenre}>
+        <Dropdown.Toggle variant="outline-info">Genre</Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+          <Dropdown.Item eventKey="2">Adventure</Dropdown.Item>
+          <Dropdown.Item eventKey="4">Comedy</Dropdown.Item>
+          <Dropdown.Item eventKey="8">Drama</Dropdown.Item>
+          <Dropdown.Item eventKey="10">Fantasy</Dropdown.Item>
+          <Dropdown.Item eventKey="14">Horror</Dropdown.Item>
+          <Dropdown.Item eventKey="17">Mystery</Dropdown.Item>
+          <Dropdown.Item eventKey="19">Psychological</Dropdown.Item>
+          <Dropdown.Item eventKey="22">Romance</Dropdown.Item>
+          <Dropdown.Item eventKey="24">Sci-Fi</Dropdown.Item>
+          <Dropdown.Item eventKey="28">Slice of Life</Dropdown.Item>
+          <Dropdown.Item eventKey="30">Supernatural</Dropdown.Item>
+          <Dropdown.Item eventKey="33">Historical</Dropdown.Item>
+          <Dropdown.Item eventKey="35">Music</Dropdown.Item>
+          <Dropdown.Item eventKey="37">Sports</Dropdown.Item>
+          <Dropdown.Item eventKey="40">Demons</Dropdown.Item>
+          <Dropdown.Item eventKey="42">Game</Dropdown.Item>
+          <Dropdown.Item eventKey="44">Martial Arts</Dropdown.Item>
+          <Dropdown.Item eventKey="46">Parody</Dropdown.Item>
+          <Dropdown.Item eventKey="47">Samurai</Dropdown.Item>
+          <Dropdown.Item eventKey="49">Space</Dropdown.Item>
+          <Dropdown.Item eventKey="51">Yaoi</Dropdown.Item>
+          <Dropdown.Item eventKey="53">Yuri</Dropdown.Item>
+          <Dropdown.Item eventKey="54">Harem</Dropdown.Item>
+>>>>>>> huanye
         </Dropdown.Menu>
       </Dropdown>
     </div>
-  )
+  );
 }
 
-export default Formulario   
+export default Formulario;

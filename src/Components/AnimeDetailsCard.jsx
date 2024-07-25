@@ -8,6 +8,7 @@ function AnimeDetailsCard(props) {
 
 
   return (
+<<<<<<< HEAD
     <Card id="anime-card-details" style={{ backgroundColor: '#89b4fb', width:'98%',marginLeft:'10px', marginTop:'50px',marginBottom:'50px'}}>
       <Card.Img variant="top" src={props.theAnime.images.jpg.image_url} />
       <Card.Body >
@@ -47,6 +48,22 @@ function AnimeDetailsCard(props) {
         
       </Card.Body>
     </Card >
+=======
+    <div className="anime-details">
+      <img src={props.theAnime.images.jpg.image_url} alt="" />
+      <h3>Name: {props.theAnime.title} </h3>
+      <button onClick={handleMore}>More details</button>
+      {isMoreVisible && (
+        <article >
+          <p>Episodes: {props.theAnime.episodes} </p>
+          <p>Score: {props.theAnime.score} </p>
+          <p>Release year: {props.theAnime.year} </p>
+          <p>Synopsis: {props.theAnime.synopsis}</p>
+          <p>Background: {props.theAnime.background}</p>
+        </article>
+      )}
+    </div>
+>>>>>>> huanye
   );
 }
 

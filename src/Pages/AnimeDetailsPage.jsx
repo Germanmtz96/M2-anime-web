@@ -79,6 +79,7 @@ function AnimeDetailsPage() {
           getCommentArr={getCommentArr}
         />
       )}
+<<<<<<< HEAD
 
       {commentArr
         .filter((eachComment) => eachComment.mal_id === parseInt(params.id))
@@ -99,6 +100,23 @@ function AnimeDetailsPage() {
           recommendationArr={recommendationArr}
           />
         )}
+=======
+      <div id="lista-comentarios">
+        {commentArr
+          .filter((eachComment) => eachComment.mal_id === parseInt(params.id))
+          .map((selectedComment) => {
+            return (
+              <ComentarioCard
+                key={selectedComment.id}
+                selectedComment={selectedComment}
+                commentArr={commentArr}
+                id={params.id}
+                getCommentArr={getCommentArr}
+              />
+            );
+          })}
+      </div>
+>>>>>>> huanye
     </div>
   );
 }
