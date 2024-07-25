@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import ListGroup from 'react-bootstrap/ListGroup';
+
 function Buscador() {
   const [searchTerm, setSearchTerm] = useState("");
   const [animeArr, setAnimeArr] = useState(null);
@@ -67,15 +69,16 @@ const handleSearch = (event) => {
         onChange={handleSearch}
         value={searchTerm}
       />
-      <ul>
+      <ListGroup>
         {filteredArr.map((anime) => {
           return (
+            
             <Link to={`/anime-list/${anime.mal_id}`}>
-              <li key={anime.mal_id}>{anime.title}</li>
+              <ListGroup.Item key={anime.mal_id}>{anime.title}</ListGroup.Item>
             </Link>
           );
         })}
-      </ul>
+      </ListGroup>
     </div>
   );
 }
