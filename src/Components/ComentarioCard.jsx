@@ -26,7 +26,7 @@ function ComentarioCard(props) {
 
   const deleteComment = async () => {
     const commentId = props.selectedComment.id;
-    await axios.delete(`http://localhost:5005/comments/${commentId}`);
+    await axios.delete(`${import.meta.env.VITE_SERVER_URL}/comments/${commentId}`);
   };
 
   if (deleteComment === true) {

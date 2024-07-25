@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { BounceLoader } from "react-spinners";
 import ListGroup from 'react-bootstrap/ListGroup';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -18,6 +18,7 @@ function Buscador() {
       setAnimeArr(response.data.data)
     } catch (error) {
       console.log(error)
+      navigate("/error")
     }
   }
   useEffect(()=>{
@@ -41,9 +42,7 @@ function Buscador() {
             eachAnime.title.toLowerCase().startsWith(searchTerm.toLowerCase())
           
         );
-        console.log(filtered)
         setFilteredArr(filtered.slice(0,5));
-        console.log(filteredArr)
       }
     }, 3000); 
     
@@ -54,15 +53,19 @@ function Buscador() {
 //funciones
 const handleSearch = (event) => {
   setSearchTerm(event.target.value);
-    console.log(searchTerm)
   };
 
   if (animeArr === null) {
-    return <h3>... Cargando</h3>;
+    (
+      <div>
+        <BounceLoader className="spinner" size={150} aria-label="Loading Spinner" ></BounceLoader>
+        <h3> Loading ... </h3>;
+      </div>
+    );
   }
 
   return (
-    <div style={{marginRight:'16px',marginTop:'18px'}}>
+    <div style={{marginRight:'5px',marginTop:'18px'}}>
       <InputGroup className="mb-3" style={{width:'166px'}}>
       <Form.Control
           autoFocus
@@ -74,12 +77,12 @@ const handleSearch = (event) => {
         />
       </InputGroup>
       
-      <ListGroup>
+      <ListGroup className="lista-busqueda">
         {filteredArr.map((anime) => {
           return (
             
             <Link to={`/anime-list/${anime.mal_id}`}>
-              <ListGroup.Item key={anime.mal_id}>{anime.title}</ListGroup.Item>
+              <ListGroup.Item key={anime.mal_id} id="search-result">{anime.title}</ListGroup.Item>
             </Link>
           );
         })}

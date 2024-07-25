@@ -5,10 +5,9 @@ import UltimosComentarios from "../Components/UltimosComentarios";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
-
+import { BounceLoader } from "react-spinners";
 function HomePage() {
   const [tendenciasArr, setTendenciasArr] = useState(null);
-
   const getData = async () => {
     try {
       const response = await axios.get("https://api.jikan.moe/v4/top/anime");
@@ -22,7 +21,11 @@ function HomePage() {
   }, []);
 
   if (tendenciasArr === null) {
-    return <h3>... Cargando</h3>;
+    return (
+      <div>
+        <h3> Loading ... </h3>;
+      </div>
+    );
   }
 
   return (
@@ -30,7 +33,7 @@ function HomePage() {
       <Link to="/anime-list">
         <Button variant="outline-info" size="lg" id="btn-ir-contenido" style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
           {" "}
-          Ir al contenido
+          Go to all animes
         </Button>
       </Link>
       <h2 id="title-carousel">Top 25 anime</h2>

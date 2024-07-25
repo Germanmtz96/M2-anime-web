@@ -10,7 +10,8 @@ function Tendencias(props) {
     <div id="card-carousel">
       <img
         src={eachTendencia.images.jpg.large_image_url}
-        className="d-block w-100"
+        className="carousel-img"
+        
       />
       <Carousel.Caption>
         <div>

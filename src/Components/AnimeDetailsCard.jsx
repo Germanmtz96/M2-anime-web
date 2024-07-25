@@ -8,13 +8,13 @@ function AnimeDetailsCard(props) {
 
 
   return (
-    <Card id="anime-card-details" style={{ backgroundColor: '#89b4fb', width:'98%',marginLeft:'10px', marginTop:'50px',marginBottom:'50px'}}>
+    <Card id="anime-card-details" className="details-card" style={{ backgroundColor: '#89b4fb',marginLeft:'10px', marginTop:'50px',marginBottom:'50px'}}>
       <Card.Img variant="top" src={props.theAnime.images.jpg.image_url} />
       <Card.Body >
       <h3 >{props.theAnime.title}</h3>
       <Accordion  >
       <Accordion.Item eventKey="0">
-        <Accordion.Header >Episodios</Accordion.Header>
+        <Accordion.Header >Episodes</Accordion.Header>
         <Accordion.Body style={{backgroundColor:'#5091fb'}}>
           {props.theAnime.episodes}
         </Accordion.Body>

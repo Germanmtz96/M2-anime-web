@@ -25,7 +25,7 @@ function EditComment(props) {
         comment,
       };
     try {
-      await axios.put(`http://localhost:5005/comments/${props.selectedComment.id}`, editedComment);
+      await axios.put(`${import.meta.env.VITE_SERVER_URL}/${props.selectedComment.id}`, editedComment);
     } catch (error) {
       console.log(error);
     }
@@ -45,7 +45,7 @@ function EditComment(props) {
       <Form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', justifyContent:'center', alignItems: 'center', flexWrap: 'wrap', marginTop:'20px', width:'98%'}}>
 
       <Form.Group className="mb-3" controlId="formNameEdit">
-        <Form.Label>Usuario</Form.Label>
+        <Form.Label>User</Form.Label>
         <Form.Control type="text" name="name" value={name} onChange={handleName} style={{width:'180px', marginRight:'94px'}}/>
       </Form.Group>
 
@@ -58,7 +58,7 @@ function EditComment(props) {
         <Form.Label>Comment</Form.Label>
         <Form.Control as="textarea" rows={3} type="text" name="comment" value={comment} onChange={handleComment} style={{width:'320px'}}/>
         </Form.Group>
-        <Button variant="outline-info" type="submit" style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Submmit edit</Button>
+        <Button variant="outline-info" type="submit" style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Submit edit</Button>
       </Form>
     </div>
   );

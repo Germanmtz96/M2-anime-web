@@ -2,8 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 import Dropdown from "react-bootstrap/Dropdown";
+import { useNavigate } from "react-router-dom";
 
 function Formulario(props) {
+  const navigate = useNavigate()
   const { currentPage, setAnimeList, status, setStatus, setGenre, genre } =
     props;
 
@@ -19,9 +21,9 @@ function Formulario(props) {
         `https://api.jikan.moe/v4/anime?page=${currentPage}&status=${status}&genres=${genre}`
       );
       setAnimeList(response.data);
-      console.log(response.data);
     } catch (error) {
       console.log(error);
+      navigate("/error")
     }
   };
   const handleDropdownStatus = (status) => {
@@ -35,7 +37,7 @@ function Formulario(props) {
     <div id="formulario-search">
       {/* Status */}
       <Dropdown className="d-inline mx-2" onSelect={handleDropdownStatus}>
-        <Dropdown.Toggle variant="outline-info">Status</Dropdown.Toggle>
+        <Dropdown.Toggle style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}} variant="outline-info">Status</Dropdown.Toggle>
 
         <Dropdown.Menu>
           <Dropdown.Item eventKey="airing">Airing</Dropdown.Item>
@@ -44,7 +46,7 @@ function Formulario(props) {
       </Dropdown>
       {/*genre*/}
       <Dropdown className="d-inline mx-2" onSelect={handleDropdownGenre}>
-        <Dropdown.Toggle variant="outline-info">Genre</Dropdown.Toggle>
+        <Dropdown.Toggle style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}variant="outline-info">Genre</Dropdown.Toggle>
 
         <Dropdown.Menu>
           <Dropdown.Item eventKey="1">Action</Dropdown.Item>
