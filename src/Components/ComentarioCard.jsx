@@ -29,7 +29,6 @@ function ComentarioCard(props) {
   }
   
   return (
-<<<<<<< HEAD
     <div className="comment" >
       
       <div
@@ -76,11 +75,6 @@ function ComentarioCard(props) {
       <Card style={{ width: '24rem' ,  backgroundColor: '#89b4fb',width:'100%'}}>
       <Card.Header >
       <Button variant="outline-info" onClick={handleEditButtom} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginRight:'5px', marginTop: '10px'}}>Edit</Button>
-=======
-    <div className="comment">
-      {/* edit */}
-      <button onClick={handleEditButtom}>Edit</button>
->>>>>>> huanye
       {editIsVisible && (
         <EditComment
           commentArr={props.commentArr}
@@ -90,7 +84,6 @@ function ComentarioCard(props) {
           handleEditButtom={handleEditButtom}
         />
       )}
-<<<<<<< HEAD
       <Button variant="outline-info" onClick={handleDelete} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginTop: '10px'}}>Delete</Button>
       </Card.Header>
       <ListGroup variant="flush">
@@ -99,18 +92,6 @@ function ComentarioCard(props) {
       <ListGroup.Item style={{backgroundColor: '#c2d8fb' , border:' 1px solid #5091fb'}}>Comment: {props.selectedComment.comment}</ListGroup.Item>
       </ListGroup>
       </Card>
-=======
-      {/* delete */}
-      <button onClick={handleDelete}>Delete</button>
-      {/* delete modal */}
-
-      {/* coment content*/}
-      <div id="single-comment">
-        <p>Name: {props.selectedComment.name}</p>
-        <p>Score: {props.selectedComment.score}</p>
-        <p id="comment-comment">Comment: {props.selectedComment.comment}</p>
-      </div>
->>>>>>> huanye
     </div>
   );
 }

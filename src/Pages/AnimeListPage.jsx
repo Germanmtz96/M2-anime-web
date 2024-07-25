@@ -58,9 +58,6 @@ function AnimeListPage() {
   }
   return (
     <div id="anime-list">
-<<<<<<< HEAD
-      <Button id="search-btn" variant="outline-info" onClick={handleFilterButton} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Busqueda avanzada</Button>
-=======
       <Button
         id="search-btn"
         variant="outline-info"
@@ -68,22 +65,11 @@ function AnimeListPage() {
       >
         Busqueda avanzada
       </Button>
->>>>>>> huanye
 
       {filterIsVisible && (
         <Formulario currentPage={currentPage} setAnimeList={setAnimeList} status={status} setStatus={setStatus} genre={genre} setGenre={setGenre}/>
       )}
 
-<<<<<<< HEAD
-    <section id="lista-animes">
-      {animeList.data.map((eachAnime, index)=>{
-        return(
-      <Link   key={index} to={`/anime-list/${eachAnime.mal_id}`}>
-        <AnimeCard eachAnime={eachAnime} key={eachAnime.mal_id} />
-      </Link>)
-      })
-      }
-=======
       <section id="lista-animes">
         {animeList.data.map((eachAnime, index) => {
           return (
@@ -92,7 +78,6 @@ function AnimeListPage() {
             </Link>
           );
         })}
->>>>>>> huanye
       </section>
       <div id="pagination">
       <button onClick={handleBefore}>Before</button>

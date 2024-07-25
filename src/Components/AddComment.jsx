@@ -47,7 +47,6 @@ function AddComment(props) {
   };
 
   return (
-<<<<<<< HEAD
       <Form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', justifyContent:'center', alignItems: 'center', flexWrap: 'wrap', marginTop:'20px', width:'98%'}}>
       <Form.Group className="mb-3" controlId="formNameAdd">
         <Form.Label >Usuario</Form.Label>
@@ -66,37 +65,6 @@ function AddComment(props) {
         
         <Button variant="outline-info" type="submit" style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginBottom:'40px'}}>Submmit edit</Button >
       </Form>
-=======
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={handleName}
-          placeholder="	Name"
-        />
-
-        <input
-          placeholder="Score"
-          type="number"
-          min="0"
-          max="10"
-          name="score"
-          value={score}
-          onChange={handleScore}
-        />
-        <input
-          placeholder="Comment"
-          type="text"
-          name="comment"
-          value={comment}
-          onChange={handleComment}
-        />
-        <button type="submit">Submmit comment</button>
-      </form>
-    </div>
->>>>>>> huanye
   );
 }
 
