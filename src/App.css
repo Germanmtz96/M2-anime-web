@@ -119,7 +119,6 @@ html * {
   margin-top: 10px;
   margin-bottom: 40px;
 }
-<<<<<<< HEAD
 
 #anime-details-container{
   margin-bottom: 40px;
@@ -127,7 +126,6 @@ html * {
 .comment{
   margin: 10px;
 }
-=======
 .card-title{
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -148,4 +146,3 @@ html * {
 #pagination{
   margin-bottom: 40px;
 }
->>>>>>> huanye
