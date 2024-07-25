@@ -49,23 +49,23 @@ function AddComment(props) {
   };
 
   return (
-      <Form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', justifyContent:'center', alignItems: 'center', flexWrap: 'wrap', marginTop:'20px', width:'98%'}}>
+      <Form onSubmit={handleSubmit} className="formularioAddComment" style={{display: 'flex', flexDirection: 'row', justifyContent:'center', alignItems: 'center', flexWrap: 'wrap', marginTop:'20px', width:'98%'}}>
       <Form.Group className="mb-3" controlId="formNameAdd">
         <Form.Label >User</Form.Label>
-        <Form.Control onChange={handleName} type="text" name="name" value={name} placeholder="Enter name" style={{width:'240px', marginRight:'94px'}}/>
+        <Form.Control onChange={handleName} type="text" name="name" value={name} placeholder="Enter name" style={{width:'150px', marginRight:'70px'}}/>
       </Form.Group>
         
       <Form.Group className="mb-3" controlId="formScoreAdd">
         <Form.Label>Score</Form.Label>
-        <Form.Control onChange={handleScore} min="0" max="10" type="number" name="score" value={score} placeholder="Enter Score" style={{width:'45px'}}/>
+        <Form.Control onChange={handleScore} min="0" max="10" type="number" name="score" value={score} placeholder="Enter Score" style={{width:'70px'}}/>
       </Form.Group>
         
       <Form.Group className="mb-3" controlId="formCommentAdd">
         <Form.Label>Comment</Form.Label>
-        <Form.Control as="textarea" rows={3} onChange={handleComment} type="text" name="comment" value={comment} placeholder="Enter Comment" style={{width:'380px'}}/>
+        <Form.Control as="textarea" className="textarea" rows={3} onChange={handleComment} type="text" name="comment" value={comment} placeholder="Enter Comment"/>
       </Form.Group>
         
-        <Button variant="outline-info" type="submit" style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginBottom:'40px'}}>Submit edit</Button >
+        <Button variant="outline-info" type="submit" style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginBottom:'40px', marginLeft:'10px'}}>Submit edit</Button >
       </Form>
   );
 }

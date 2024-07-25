@@ -38,7 +38,7 @@ function ComentarioCard(props) {
       
      
      
-      <Card style={{ width: '24rem' ,  backgroundColor: '#89b4fb',width:'100%'}}>
+      <Card className="comentarios-card" style={{ maxWidth: '300px' , backgroundColor: '#89b4fb'}}>
       <Card.Header >
       <Button variant="outline-info" onClick={handleEditButtom} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginRight:'5px', marginTop: '10px'}}>Edit</Button>
       {editIsVisible && (

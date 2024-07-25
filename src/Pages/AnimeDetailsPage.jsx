@@ -74,12 +74,32 @@ function AnimeDetailsPage() {
         flexDirection: "row",
         flexWrap:'wrap',
         textAlign: "center",
-        justifyContent: "center",
-        width: "98%",
+        justifyContent: "start",
+        width: "100%",
       }}
     >
+      <div style={{display:'flex', flexDirection:'column', width:'100%'}}>
       <AnimeDetailsCard theAnime={theAnime} />
       <Button
+      className="details-btn"
+        onClick={handleRecommendation}
+        style={{
+          backgroundColor: "#c2d8fb",
+          color: "black",
+          border: "1px solid #5091fb",
+          marginLeft: "14px",
+          marginBottom:'20px'
+        }}
+      >
+        Recommendations
+      </Button>
+      {recommendations && (
+        <Recommendations recommendationArr={recommendationArr} />
+      )}
+      </div>
+      <div className="caja-comentarios">
+      <Button
+      className="details-btn"
         variant="outline-info"
         onClick={handleAdd}
         style={{
@@ -113,22 +133,7 @@ function AnimeDetailsPage() {
             />
           );
         })}
-      <Button
-        onClick={handleRecommendation}
-        style={{
-          backgroundColor: "#c2d8fb",
-          color: "black",
-          border: "1px solid #5091fb",
-          marginLeft: "10px",
-          marginTop: "20px",
-        }}
-      >
-        Recommendations
-      </Button>
-      {recommendations && (
-        <Recommendations recommendationArr={recommendationArr} />
-      )}
-    
+    </div>
     </div>
   );
 }
