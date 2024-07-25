@@ -25,7 +25,7 @@ function EditComment(props) {
         comment,
       };
     try {
-      await axios.put(`http://localhost:5005/comments/${props.selectedComment.id}`, editedComment);
+      await axios.put(`${import.meta.env.VITE_SERVER_URL}/${props.selectedComment.id}`, editedComment);
     } catch (error) {
       console.log(error);
     }

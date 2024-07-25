@@ -2,8 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 import Dropdown from "react-bootstrap/Dropdown";
+import { useNavigate } from "react-router-dom";
 
 function Formulario(props) {
+  const navigate = useNavigate()
   const { currentPage, setAnimeList, status, setStatus, setGenre, genre } =
     props;
 
@@ -19,9 +21,9 @@ function Formulario(props) {
         `https://api.jikan.moe/v4/anime?page=${currentPage}&status=${status}&genres=${genre}`
       );
       setAnimeList(response.data);
-      console.log(response.data);
     } catch (error) {
       console.log(error);
+      navigate("/error")
     }
   };
   const handleDropdownStatus = (status) => {

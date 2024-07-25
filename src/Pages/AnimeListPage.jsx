@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import Formulario from "../Components/Formulario";
 import AnimeCard from "../Components/AnimeCard";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import { BounceLoader } from "react-spinners";
 import Button from "react-bootstrap/Button";
 
 function AnimeListPage() {
@@ -14,16 +14,17 @@ function AnimeListPage() {
   const [inputPage, setInputPage] = useState(currentPage);
   const [status, setStatus] = useState("");
   const [genre, setGenre] = useState("");
-
+  const navigate = useNavigate()
+  
   const getData = async () => {
     try {
       const response = await axios.get(
         `https://api.jikan.moe/v4/anime?page=${currentPage}&status=${status}&genres=${genre}`
       );
       setAnimeList(response.data);
-      console.log(response.data)
     } catch (error) {
       console.log(error);
+      navigate("/error")
     }
   };
 
@@ -32,7 +33,12 @@ function AnimeListPage() {
   }, [currentPage,status,genre]);
 
   if (animeList === null) {
-    return <h3>... Cargando</h3>;
+    return (
+      <div>
+        <BounceLoader className="spinner" size={150} aria-label="Loading Spinner" ></BounceLoader>
+        <h3> Loading ... </h3>;
+      </div>
+    );
   }
 
   function handleFilterButtonIsVisible() {

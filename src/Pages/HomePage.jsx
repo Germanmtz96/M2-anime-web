@@ -5,10 +5,9 @@ import UltimosComentarios from "../Components/UltimosComentarios";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
-
+import { BounceLoader } from "react-spinners";
 function HomePage() {
   const [tendenciasArr, setTendenciasArr] = useState(null);
-
   const getData = async () => {
     try {
       const response = await axios.get("https://api.jikan.moe/v4/top/anime");
@@ -22,7 +21,12 @@ function HomePage() {
   }, []);
 
   if (tendenciasArr === null) {
-    return <h3>... Cargando</h3>;
+    return (
+      <div>
+        <BounceLoader className="spinner" size={150} aria-label="Loading Spinner" ></BounceLoader>
+        <h3> Loading ... </h3>;
+      </div>
+    );
   }
 
   return (
