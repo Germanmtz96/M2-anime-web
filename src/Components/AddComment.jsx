@@ -51,7 +51,7 @@ function AddComment(props) {
   return (
       <Form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', justifyContent:'center', alignItems: 'center', flexWrap: 'wrap', marginTop:'20px', width:'98%'}}>
       <Form.Group className="mb-3" controlId="formNameAdd">
-        <Form.Label >Usuario</Form.Label>
+        <Form.Label >User</Form.Label>
         <Form.Control onChange={handleName} type="text" name="name" value={name} placeholder="Enter name" style={{width:'240px', marginRight:'94px'}}/>
       </Form.Group>
         

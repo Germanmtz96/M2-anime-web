@@ -23,7 +23,6 @@ function HomePage() {
   if (tendenciasArr === null) {
     return (
       <div>
-        <BounceLoader className="spinner" size={150} aria-label="Loading Spinner" ></BounceLoader>
         <h3> Loading ... </h3>;
       </div>
     );
@@ -34,7 +33,7 @@ function HomePage() {
       <Link to="/anime-list">
         <Button variant="outline-info" size="lg" id="btn-ir-contenido" style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>
           {" "}
-          Ir al contenido
+          Go to all animes
         </Button>
       </Link>
       <h2 id="title-carousel">Top 25 anime</h2>

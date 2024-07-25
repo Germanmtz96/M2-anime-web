@@ -67,11 +67,12 @@ function AnimeListPage() {
   return (
     <div id="anime-list">
       <Button
+        style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}
         id="search-btn"
         variant="outline-info"
         onClick={handleFilterButtonIsVisible}
       >
-        Busqueda avanzada
+        Advanced filters
       </Button>
 
       {filterIsVisible && (
@@ -89,7 +90,7 @@ function AnimeListPage() {
       </section>
       <div id="pagination" style={{display:'flex', flexDirection:'row', padding:'10px',}}>
       <Button onClick={handleBefore} style={{height:'40px', backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Before</Button>
-      <InputGroup className="mb-3" style={{height:'40px',width:'180px', marginLeft:'10px',marginRight:'10px'}}>
+      <InputGroup className="mb-3" style={{height:'40px',width:'140px', marginLeft:'10px',marginRight:'10px'}}>
       <Form.Control
           type="number"
           onChange={handlePageChange}

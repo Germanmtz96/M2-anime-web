@@ -65,7 +65,7 @@ const handleSearch = (event) => {
   }
 
   return (
-    <div style={{marginRight:'20px',marginTop:'18px'}}>
+    <div style={{marginRight:'5px',marginTop:'18px'}}>
       <InputGroup className="mb-3" style={{width:'166px'}}>
       <Form.Control
           autoFocus
@@ -82,7 +82,7 @@ const handleSearch = (event) => {
           return (
             
             <Link to={`/anime-list/${anime.mal_id}`}>
-              <ListGroup.Item key={anime.mal_id}>{anime.title}</ListGroup.Item>
+              <ListGroup.Item key={anime.mal_id} id="search-result">{anime.title}</ListGroup.Item>
             </Link>
           );
         })}

@@ -14,7 +14,7 @@ function AnimeDetailsCard(props) {
       <h3 >{props.theAnime.title}</h3>
       <Accordion  >
       <Accordion.Item eventKey="0">
-        <Accordion.Header >Episodios</Accordion.Header>
+        <Accordion.Header >Episodes</Accordion.Header>
         <Accordion.Body style={{backgroundColor:'#5091fb'}}>
           {props.theAnime.episodes}
         </Accordion.Body>

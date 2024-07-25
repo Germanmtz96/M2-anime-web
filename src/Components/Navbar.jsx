@@ -43,7 +43,7 @@ function MyNavbar() {
     >
       <Container fluid>
         <Navbar.Brand as={Link} to="/">
-          <img src={logo} height={40} />
+          <img src={logo} width={150} />
         </Navbar.Brand>
         <Buscador />
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -52,6 +52,7 @@ function MyNavbar() {
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: "100px" }}
             navbarScroll
+
           >
             <Nav.Link as={Link} to="/">
               Top 25 Animes

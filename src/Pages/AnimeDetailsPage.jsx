@@ -78,7 +78,6 @@ function AnimeDetailsPage() {
       }}
     >
       <AnimeDetailsCard theAnime={theAnime} />
-
       <Button
         variant="outline-info"
         onClick={handleAdd}
@@ -128,6 +127,7 @@ function AnimeDetailsPage() {
       {recommendations && (
         <Recommendations recommendationArr={recommendationArr} />
       )}
+    
     </div>
   );
 }
