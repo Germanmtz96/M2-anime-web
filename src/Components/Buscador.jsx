@@ -62,7 +62,7 @@ const handleSearch = (event) => {
   }
 
   return (
-    <div style={{marginRight:'20px',marginTop:'18px'}}>
+    <div style={{marginRight:'16px',marginTop:'18px'}}>
       <InputGroup className="mb-3" style={{width:'166px'}}>
       <Form.Control
           autoFocus
