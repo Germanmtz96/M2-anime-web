@@ -21,15 +21,14 @@ function AboutPage() {
       </Card.Body>
     </Card >
     <Card  id='about' style={{ width: '12rem' , backgroundColor: '#89b4fb'}}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src="/src/assets/foto-german.jpg" />
       <Card.Body>
       <Card.Title>Huanye</Card.Title>
       <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+      Developer based in Spain. Obsessed with making interactive and artistic pages.
         </Card.Text>
-        <Card.Link href="#">Github</Card.Link>
-        <Card.Link href="#">LinkedIn</Card.Link>
+        <a href="https://github.com/Huanye98?tab=repositories">Github</a>
+        <a href="https://www.linkedin.com/in/huanye-zhu-016792222/">LinkedIn</a>
       </Card.Body>
     </Card >
     </div>
