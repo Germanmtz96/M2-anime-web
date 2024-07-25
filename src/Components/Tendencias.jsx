@@ -1,10 +1,12 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 
+import { Link } from "react-router-dom";
 function Tendencias(props) {
   const { eachTendencia } = props;
 
   return (
+    <Link to={`/anime-list/${eachTendencia.mal_id}`}>
     <div id="card-carousel">
       <img
         src={eachTendencia.images.jpg.large_image_url}
@@ -16,6 +18,7 @@ function Tendencias(props) {
         </div>
       </Carousel.Caption>
     </div>
+    </Link>
   );
 }
 
