@@ -88,7 +88,9 @@ html * {
   margin-top: 10px;
   margin-bottom: 40px;
 }
-
+.carousel-indicators button{
+  background-color: #6b20ee!important;
+}
 #anime-details-container {
   margin-bottom: 40px;
 }
