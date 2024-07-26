@@ -149,7 +149,13 @@ width: 290px;
 }
 
 @media (min-width: 431px) and (max-width: 1400px) {
-
+  .logo{
+    width: 220px;
+  }
+  .buscador{
+    width: 200px!important;
+    margin-bottom: 10px;
+  }
   #pagination {
     display: flex;
     justify-content: center;
@@ -187,9 +193,6 @@ width: 290px;
     flex-wrap: wrap;
     justify-content: center!important;
   }
-  #anime-details-container{
-
-  }
   .img-recomendadas{
     margin: 3px!important;
   }
@@ -200,4 +203,186 @@ width: 290px;
   .textarea{
     width: 300px!important;
   }
+}
+@media (min-width: 1401px){
+  #carousel{
+    width: 550px;
+  }
+  #carousel-coment{
+    width: 1000px!important;
+    font-size: 1.6em;
+  
+  }
+  .div-carousel-comment{
+    margin-top: 50px;
+    width: 1000px;
+  }
+  .carousel-img-text{
+    display: flex!important;
+    flex-direction: row!important;
+    flex-wrap: nowrap!important;
+    justify-content:space-around;
+  }
+#btn-ir-contenido{
+  width: 300px;
+  height: 80px;
+  font-size: 1.6em;
+  margin-top: 100px;
+}
+.bnt-comments{
+display: flex!important;
+flex-direction: column!important;
+align-items: center!important;
+}
+#title-carousel{
+  font-size: 3.5em;
+}
+#ult-com-comment{
+  max-width: 100%!important;
+}
+
+#anime-details-container{
+display: flex!important;
+    flex-direction: row!important;
+    flex-wrap: nowrap!important;
+    justify-content:space-around!important;
+}
+.card-details-btn-recommendation{
+  width: 650px!important;
+  align-items: center;
+  
+}
+.formularioAddComment{
+  font-size: 1.3em!important;
+  
+  display: flex!important;
+    flex-direction: row!important;
+    align-items: center;
+    justify-content: center;
+}
+.caja-comentarios{
+  width: 1000px!important;
+  font-size: 1.6em!important;
+  
+}
+.details-btn{
+  margin-top: 50px;
+  width: 300px;
+  height: 80px;
+  font-size: 1.7em!important;
+}
+.details-btn-recom{
+  margin-top: 50px;
+  width: 300px;
+  height: 80px;
+  font-size: 1.9em!important;
+}
+.comentarios-card{
+  max-width: 100%!important;
+  font-size: 1.3em!important;
+}
+.btn-comentario-card{
+  width: 150px!important;
+  height: 80px!important;
+  font-size: 1.2em!important;
+}
+.btn-modal{
+  font-size: 1.1em!important;
+}
+.formulario-addcomment{
+  font-size: 1.1em!important;
+  width: 250px!important;
+  margin-bottom: 100px;
+}
+.formulario-addcomment-score{
+  font-size: 1.1em!important;
+  width: 80px!important;
+  margin-bottom: 100px;
+  margin-right: 50px;
+}
+.textarea{
+  font-size: 1.1em!important;
+  width: 250px!important;
+}
+.details-card-accordion{
+  font-size: 2em!important;
+}
+#anime-card-details {
+  font-size: 2em!important;
+}
+.img-recomendadas{
+  width: 175px!important;
+  height:300px!important;
+  margin-bottom: 80px!important;
+}
+
+.titulo-recom{
+  font-size: 2em!important;
+}
+.about{
+  width: 400px!important;
+  font-size: 2em!important;
+}
+.title-about{
+  font-size: 1.4em!important;
+}
+.title-about-proyect{
+  font-size: 2.6em!important;
+}
+.all-animes-card{
+  width: 450px!important;
+  margin-top: 40px!important;
+}
+.all-animes-title{
+  font-size: 2.6em!important;
+}
+.all-animes-img{
+  width: 450px!important;
+  height: 580px!important;
+}
+#search-btn{
+  width: 340px!important;
+  height: 80px!important;
+  font-size: 2em!important;
+}
+#pagination{
+  justify-content: center;
+}
+#input-paginas{
+  width: 200px!important;
+  height: 60px!important;
+  font-size: 2em!important;
+}
+.btn-before{
+  width: 200px!important;
+  height: 60px!important;
+  font-size: 2em!important;
+}
+.tamaño-dropdown{
+  font-size: 2em!important;
+}
+#navbar{
+  font-size: 2em!important;
+}
+.logo{
+  width: 600px!important;
+}
+.buscador{
+  margin-right: 80px;
+  height: 50px;
+  width: 400px!important;
+}
+.buscador-control{
+  font-size: 1.1em!important;
+}
+.footer{
+  height: 60px;
+}
+.links-about{
+  font-size: 2.2em!important;
+  height: 56px;
+}
+.img-recomendadas-altura{
+  height: 240px!important;
+}
 }

@@ -32,7 +32,7 @@ function UltimosComentarios() {
   }
 
   return (
-    <div>
+    <div className="div-carousel-comment">
       <h2 id="last-comments-title">Last comments</h2>
       <Carousel data-bs-theme="dark" id="carousel-coment" style={{width:'100%',marginBottom:"40px"}}>
         {comentarioArr.map((e) => {

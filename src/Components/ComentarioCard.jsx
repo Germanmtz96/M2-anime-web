@@ -40,7 +40,7 @@ function ComentarioCard(props) {
      
       <Card className="comentarios-card" style={{ maxWidth: '300px' , backgroundColor: '#89b4fb'}}>
       <Card.Header >
-      <Button variant="outline-info" onClick={handleEditButtom} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginRight:'5px', marginTop: '10px'}}>Edit</Button>
+      <Button variant="outline-info" className="btn-comentario-card" onClick={handleEditButtom} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginRight:'5px', marginTop: '10px'}}>Edit</Button>
       {editIsVisible && (
         <EditComment
           commentArr={props.commentArr}
@@ -50,7 +50,7 @@ function ComentarioCard(props) {
           handleEditButtom={handleEditButtom}
         />
       )}
-      <Button variant="outline-info" onClick={handleDeleteButtom} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginTop: '10px'}}>Delete</Button>
+      <Button variant="outline-info" className="btn-comentario-card" onClick={handleDeleteButtom} style={{ backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginTop: '10px'}}>Delete</Button>
       {openModal && (<div
       className="modal show"
       style={{ display: 'block', position: 'initial' }}
@@ -65,8 +65,8 @@ function ComentarioCard(props) {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleDeleteButtom}>No</Button>
-          <Button variant="primary" onClick={handleDelete}>Yes</Button>
+          <Button variant="secondary" className="btn-modal" onClick={handleDeleteButtom}>No</Button>
+          <Button variant="primary" className="btn-modal" onClick={handleDelete}>Yes</Button>
         </Modal.Footer>
       </Modal.Dialog>
     </div>)}

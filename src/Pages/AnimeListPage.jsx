@@ -89,8 +89,8 @@ function AnimeListPage() {
         })}
       </section>
       <div id="pagination" style={{display:'flex', flexDirection:'row', padding:'10px',}}>
-      <Button onClick={handleBefore} style={{height:'40px', backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Before</Button>
-      <InputGroup className="mb-3" style={{height:'40px',width:'140px', marginLeft:'10px',marginRight:'10px'}}>
+      <Button className="btn-before" onClick={handleBefore} style={{height:'40px', backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Before</Button>
+      <InputGroup className="mb-3" id="input-paginas" style={{height:'40px',width:'140px', marginLeft:'10px',marginRight:'10px'}}>
       <Form.Control
           type="number"
           onChange={handlePageChange}
@@ -98,10 +98,10 @@ function AnimeListPage() {
           min={1}
         />
       </InputGroup>
-        <Button type="button" onClick={handlePageSubmit} style={{height:'40px',backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginRight:'10px'}}>
+        <Button type="button" className="btn-before" onClick={handlePageSubmit} style={{height:'40px',backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb', marginRight:'10px'}}>
           Go to page
         </Button>
-        <Button onClick={handleNext} style={{height:'40px', backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Next</Button>
+        <Button onClick={handleNext} className="btn-before" style={{height:'40px', backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}>Next</Button>
       </div>
     </div>
   );

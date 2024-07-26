@@ -43,7 +43,7 @@ function MyNavbar() {
     >
       <Container fluid>
         <Navbar.Brand as={Link} to="/">
-          <img src={logo} width={150} />
+          <img className="logo" src={logo} width={130} />
         </Navbar.Brand>
         <Buscador />
         <Navbar.Toggle aria-controls="navbarScroll" />

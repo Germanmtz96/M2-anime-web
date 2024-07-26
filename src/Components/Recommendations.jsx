@@ -10,7 +10,7 @@ function Recommendations(props) {
 <Link   to={`/anime-list/${props.recommendationArr[0].entry.mal_id}` } >
     <Card className='img-recomendadas' style={{ width: '5rem', margin: '10px' , backgroundColor: '#89b4fb'}} >
 
-    <Card.Img variant="top" src={props.recommendationArr[0].entry.images.jpg.large_image_url} style={{ height:'100px'}} />
+    <Card.Img variant="top" className='img-recomendadas-altura' src={props.recommendationArr[0].entry.images.jpg.large_image_url} style={{ height:'100px'}} />
     <Card.Title className="titulo-recom" style={{ paddingTop:"2px",height:'44px', overflow:'hidden', fontSize:"16px"}}>{props.recommendationArr[0].entry.title}</Card.Title> 
 
 
@@ -19,7 +19,7 @@ function Recommendations(props) {
 <Link   to={`/anime-list/${props.recommendationArr[1].entry.mal_id}`}>
   <Card className='img-recomendadas' style={{ width: '5rem', margin: '10px' , backgroundColor: '#89b4fb' }} >
 
-    <Card.Img variant="top" src={props.recommendationArr[1].entry.images.jpg.large_image_url} style={{ height:'100px'}} />
+    <Card.Img variant="top" className='img-recomendadas-altura' src={props.recommendationArr[1].entry.images.jpg.large_image_url} style={{ height:'100px'}} />
     <Card.Title className="titulo-recom" style={{ paddingTop:"2px",height:'44px', overflow:'hidden', fontSize:"16px"}}>{props.recommendationArr[1].entry.title}</Card.Title> 
 
 
@@ -28,7 +28,7 @@ function Recommendations(props) {
   <Link   to={`/anime-list/${props.recommendationArr[2].entry.mal_id}`}>
     <Card className='img-recomendadas' style={{ width: '5rem', margin: '10px' , backgroundColor: '#89b4fb' }} >
 
-    <Card.Img variant="top" src={props.recommendationArr[2].entry.images.jpg.large_image_url} style={{ height:'100px'}} />
+    <Card.Img variant="top" className='img-recomendadas-altura' src={props.recommendationArr[2].entry.images.jpg.large_image_url} style={{ height:'100px'}} />
     <Card.Title className="titulo-recom" style={{paddingTop:"2px", height:'44px', overflow:'hidden', fontSize:"16px"}}>{props.recommendationArr[2].entry.title}</Card.Title> 
 
 
@@ -37,7 +37,7 @@ function Recommendations(props) {
   <Link   to={`/anime-list/${props.recommendationArr[3].entry.mal_id}`}>
   <Card className='img-recomendadas' style={{ width: '5rem', margin: '10px' , backgroundColor: '#89b4fb' }} >
 
-    <Card.Img variant="top" src={props.recommendationArr[3].entry.images.jpg.large_image_url} style={{ height:'100px'}} />
+    <Card.Img variant="top" className='img-recomendadas-altura' src={props.recommendationArr[3].entry.images.jpg.large_image_url} style={{ height:'100px'}} />
     <Card.Title className="titulo-recom" style={{ paddingTop:"2px",height:'44px', overflow:'hidden', fontSize:"16px"}}>{props.recommendationArr[3].entry.title}</Card.Title> 
 
 

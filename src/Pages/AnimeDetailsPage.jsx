@@ -78,10 +78,10 @@ function AnimeDetailsPage() {
         width: "100%",
       }}
     >
-      <div style={{display:'flex', flexDirection:'column', width:'100%'}}>
+      <div className="card-details-btn-recommendation" style={{display:'flex', flexDirection:'column', width:'100%'}}>
       <AnimeDetailsCard theAnime={theAnime} />
       <Button
-      className="details-btn"
+      className="details-btn-recom"
         onClick={handleRecommendation}
         style={{
           backgroundColor: "#c2d8fb",

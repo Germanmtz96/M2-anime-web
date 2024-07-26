@@ -37,18 +37,18 @@ function Formulario(props) {
     <div id="formulario-search">
       {/* Status */}
       <Dropdown className="d-inline mx-2" onSelect={handleDropdownStatus}>
-        <Dropdown.Toggle style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}} variant="outline-info">Status</Dropdown.Toggle>
+        <Dropdown.Toggle className="btn-before" style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}} variant="outline-info">Status</Dropdown.Toggle>
 
-        <Dropdown.Menu>
+        <Dropdown.Menu className="tamaño-dropdown">
           <Dropdown.Item eventKey="airing">Airing</Dropdown.Item>
           <Dropdown.Item eventKey="complete">Completed</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
       {/*genre*/}
       <Dropdown className="d-inline mx-2" onSelect={handleDropdownGenre}>
-        <Dropdown.Toggle style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}variant="outline-info">Genre</Dropdown.Toggle>
+        <Dropdown.Toggle className="btn-before" style={{backgroundColor: '#c2d8fb' , color : 'black' , border: '1px solid #5091fb'}}variant="outline-info">Genre</Dropdown.Toggle>
 
-        <Dropdown.Menu>
+        <Dropdown.Menu className="tamaño-dropdown">
           <Dropdown.Item eventKey="1">Action</Dropdown.Item>
           <Dropdown.Item eventKey="2">Adventure</Dropdown.Item>
           <Dropdown.Item eventKey="4">Comedy</Dropdown.Item>

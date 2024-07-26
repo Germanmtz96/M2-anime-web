@@ -65,9 +65,10 @@ const handleSearch = (event) => {
   }
 
   return (
-    <div style={{marginRight:'5px',marginTop:'18px'}}>
-      <InputGroup className="mb-3" style={{width:'166px'}}>
+    <div style={{marginTop:'18px'}}>
+      <InputGroup className="buscador" style={{width:'120px'}}>
       <Form.Control
+      className="buscador-control"
           autoFocus
           type="text"
           autoComplete="off"
